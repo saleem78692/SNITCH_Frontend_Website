@@ -16,10 +16,12 @@
 
         <!-- header -->
         <header class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
                 <div class="container-fluid px-3 px-lg-4 position-relative">
-                    <button class="btn btn-link link-dark p-0 border-0 me-3" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+
+                    <!-- MENU BUTTON (LEFT) -->
+                    <button class="btn btn-link link-dark p-0 border-0 me-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -27,136 +29,170 @@
                         </svg>
                     </button>
 
-                    <a class="navbar-brand mx-auto position-absolute top-50 start-50 translate-middle fw-bold text-uppercase ls-2 d-flex align-items-center"
-                        href="#">
-                        <img src="assets/slider-images/SNITCH_LOGO_NEW_BLACK.webp" height="50px" alt="">
-
+                    <!-- LOGO (CENTER) -->
+                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="#">
+                        <img src="assets/slider-images/SNITCH_LOGO_NEW_BLACK.webp" class="logo-img" alt="Logo">
                     </a>
 
+                    <!-- RIGHT ICONS -->
                     <div class="d-flex align-items-center ms-auto">
-                        <form class="d-none d-lg-flex me-3 position-relative" role="search">
+
+                        <!-- DESKTOP SEARCH -->
+                        <form class="d-none d-lg-flex me-3 position-relative">
                             <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 rounded-0" id="search-addon">
-                                    <img src="assets/slider-images/search-icon.svg" height="20px" width="20px" alt="">
+                                <span class="input-group-text bg-white border-end-0 rounded-0">
+                                    <img src="assets/slider-images/search-icon.svg" height="18" alt="">
                                 </span>
                                 <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
-                                    placeholder='Search "Overshirts"' aria-label="Search"
-                                    aria-describedby="search-addon" style="width: 200px;">
+                                    placeholder='Search "Overshirts"' style="width:200px;">
                             </div>
                         </form>
-                        <a href="#" style="color: black; font-size: 28px;" class="text-decoration-none"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person"></i></a>
-                        &nbsp;&nbsp;
-                        <a href="#" style="color: black; font-size: 28px;" class="text-decoration-none"><i
-                                class="bi bi-cart"></i></a>
+
+                        <!-- MOBILE SEARCH ICON -->
+                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
+                            <i class="bi bi-search"></i>
+                        </a>
+
+                        <!-- USER -->
+                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="bi bi-person"></i>
+                        </a>
+
+                        <!-- CART -->
+                        <a href="#" class="text-dark fs-4">
+                            <i class="bi bi-cart"></i>
+                        </a>
                     </div>
                 </div>
             </nav>
-
         </header>
 
-        <!-- hero -->
+
+        <!-- HERO SECTION -->
         <section id="hero">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="assets/slider-images/slider-10.jpg" height="700px" width="100%" class="d-block w-100"
-                            alt="...">
+
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="assets/slider-images/slider-10.jpg" class="d-block w-100 hero-img" alt="Slide 1">
                     </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="assets/slider-images/slider-11.jpg" height="700px" width="100%" class="d-block w-100"
-                            alt="...">
+
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="assets/slider-images/slider-11.jpg" class="d-block w-100 hero-img" alt="Slide 2">
                     </div>
+
                     <div class="carousel-item">
-                        <img src="assets/slider-images/slider-12.jpg" height="700px" width="100%" class="d-block w-100"
-                            alt="...">
+                        <img src="assets/slider-images/slider-12.jpg" class="d-block w-100 hero-img" alt="Slide 3">
                     </div>
+
                 </div>
+
+                <!-- CONTROLS -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
+
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
                     data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon"></span>
                 </button>
+
             </div>
         </section>
 
-        <!-- feature -->
-        <section id="feature">
-            <div class="text-center">
+
+        <!-- FEATURE -->
+        <section id="feature" class="mt-4">
+            <div class="text-center mb-3">
                 <h3>Featured Categories</h3>
             </div>
-            <div class="row m-0">
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/cargos.webp" height="100%"
-                        width="100%" alt="">
+
+            <div class="row m-0 gy-3">
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/cargos.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Cargos</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/jackets.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/jackets.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Jackets</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/jeans.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/jeans.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Jeans</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/overshirts.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/overshirts.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">T-Shirts</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/plus-size.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/plus-size.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Plus Size</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/shirts.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/shirts.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Shirts</p>
                 </div>
             </div>
-            <div class="row m-0 mt-2">
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/cargos.webp" height="100%"
-                        width="100%" alt="">
+
+            <div class="row m-0 gy-3 mt-2">
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/cargos.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Jeans</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/jackets.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/jackets.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Jackets</p>
                 </div>
-                <div class="col-sm-2 position-relative"><img src="assets/Feature-images/shoes.webp" height="100%"
-                        width="100%" alt="">
+
+                <div class="col-6 col-md-4 col-lg-2 position-relative">
+                    <img src="assets/Feature-images/shoes.webp" class="img-fluid feature-img" alt="">
                     <p class="feature-text">Shoes</p>
                 </div>
             </div>
         </section>
 
-        <!-- Match the mood -->
-        <section class="Match-the-mood">
-            <div class="text-center">
+
+        <!-- Match the Mood -->
+        <section class="Match-the-mood mt-5">
+            <div class="text-center mb-3">
                 <h3>Match the Mood</h3>
             </div>
+
             <div class="container">
-                <div class="row m-0 mt-5 justify-content-center">
-                    <div class="col-sm-2">
-                        <img src="assets/match-mood-images/brunch.webp" height="100%" width="100%" alt="">
+                <div class="row m-0 gy-4 justify-content-center">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="assets/match-mood-images/brunch.webp" class="img-fluid mood-img" alt="Brunch">
                     </div>
-                    <div class="col-sm-2">
-                        <img src="assets/match-mood-images/dinner.webp" height="100%" width="100%" alt="">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="assets/match-mood-images/dinner.webp" class="img-fluid mood-img" alt="Dinner">
                     </div>
-                    <div class="col-sm-2">
-                        <img src="assets/match-mood-images/gateway.webp" height="100%" width="100%" alt="">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="assets/match-mood-images/gateway.webp" class="img-fluid mood-img" alt="Gateway">
                     </div>
-                    <div class="col-sm-2">
-                        <img src="assets/match-mood-images/movie.webp" height="100%" width="100%" alt="">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="assets/match-mood-images/movie.webp" class="img-fluid mood-img" alt="Movie">
                     </div>
-                    <div class="col-sm-2">
-                        <img src="assets/match-mood-images/single.webp" height="100%" width="100%" alt="">
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <img src="assets/match-mood-images/single.webp" class="img-fluid mood-img" alt="Single">
                     </div>
+
                 </div>
             </div>
         </section>
+
 
         <!-- Steals -->
         <section id="steal" class="mt-3">
@@ -165,16 +201,16 @@
             </div>
             <div class="container">
                 <div class="row m-0 mt-3 justify-content-center">
-                    <div class="col-sm-2">
+                    <div class="col-6 col-md-3 col-lg-3">
                         <img src="assets/Steals-images/perfume.webp" height="100%" width="100%" alt="">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-6 col-md-3 col-lg-3">
                         <img src="assets/Steals-images/sale.webp" height="100%" width="100%" alt="">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-6 col-md-3 col-lg-3">
                         <img src="assets/Steals-images/winter-call.webp" height="100%" width="100%" alt="">
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-6 col-md-3 col-lg-3">
                         <img src="assets/Steals-images/shirts.webp" height="100%" width="100%" alt="">
                     </div>
                 </div>
@@ -195,836 +231,555 @@
             </div>
         </section>
 
-        <!-- new and popular -->
+        <!-- NEW AND POPULAR -->
         <section id="new-and-popular" class="mt-4">
-            <div class="text-center">
+
+            <div class="text-center mb-3">
                 <h3>New And Popular</h3>
             </div>
-            <div class="row m-0 mt-3 justify-content-center">
-                <div class="col-sm-7">
-                    <button class="btn btn-outline-dark active">All</button>
-                    <button class="btn btn-outline-dark">Shirts</button>
-                    <button class="btn btn-outline-dark">Jeans</button>
-                    <button class="btn btn-outline-dark">T-Shirts</button>
-                    <button class="btn btn-outline-dark">Trousers</button>
-                    <button class="btn btn-outline-dark">Jackets</button>
-                    <button class="btn btn-outline-dark">Sweater</button>
-                    <button class="btn btn-outline-dark">Hoodies</button>
-                    <button class="btn btn-outline-dark">Perfumes</button>
-                    <button class="btn btn-outline-dark">Shoes</button>
+
+            <!-- FILTER BUTTONS -->
+            <div class="row m-0 justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 text-center">
+                    <button class="btn btn-outline-dark active mb-2">All</button>
+                    <button class="btn btn-outline-dark mb-2">Shirts</button>
+                    <button class="btn btn-outline-dark mb-2">Jeans</button>
+                    <button class="btn btn-outline-dark mb-2">T-Shirts</button>
+                    <button class="btn btn-outline-dark mb-2">Trousers</button>
+                    <button class="btn btn-outline-dark mb-2">Jackets</button>
+                    <button class="btn btn-outline-dark mb-2">Sweater</button>
+                    <button class="btn btn-outline-dark mb-2">Hoodies</button>
+                    <button class="btn btn-outline-dark mb-2">Perfumes</button>
+                    <button class="btn btn-outline-dark mb-2">Shoes</button>
                 </div>
             </div>
-            <div class="row m-0 mt-3">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/fit-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Fit Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/coat-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Coat Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Cotton Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/fit-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Fit Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/sweater.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Sweater</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/striped-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Striped Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/Denim-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Denim Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Cotton Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/striped-shirt4.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/striped-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/striped-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/striped-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit4.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Slim Fit</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit8.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit7.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit6.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit5.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit4.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/sweater.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/slim-fit1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/plaid-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/luxe-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/kurta-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/jeans.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/gingham-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/floral-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/floral-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/Embroidery-Shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/Denim-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt5.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt4.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/cotton-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
+
+            <!-- PRODUCTS GRID -->
+            <div class="container-fluid mt-4">
+                <div class="row g-3">
+
+                    <!-- PRODUCT CARD -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
-            <div class="text-center mt-5"><button id="view-more" class="text-decoration-none text-dark"><i
-                        class="bi bi-eye"></i>View More.....</button></div>
+
+            <!-- VIEW MORE -->
+            <div class="text-center mt-5">
+                <button id="view-more" class="btn btn-outline-dark">
+                    <i class="bi bi-eye"></i> View More
+                </button>
+            </div>
+
         </section>
 
-        <!-- new popular -->
+
+        <!-- NEW & POPULAR -->
         <section id="new-popular" class="mt-4">
-            <div class="row m-0 mt-3">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
+
+            <div class="container-fluid">
+                <div class="row g-3">
+
+                    <!-- PRODUCT -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <p class="m-0">Abstract Shirt</p>
+                            <p>₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <p class="m-0">Blend Shirt</p>
+                            <p>₹500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <p class="m-0">Check Shirt</p>
+                            <p>₹400</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/blend-shirt1.webp" alt="">
+                            <p class="m-0">Blend Shirt</p>
+                            <p>₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt.webp" alt="">
+                            <p class="m-0">Check Shirt</p>
+                            <p>₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <img src="assets/Popular-image/check-shirt2.webp" alt="">
+                            <p class="m-0">Check Shirt</p>
+                            <p>₹1500</p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
+
+                <!-- VIEW MORE -->
+                <div class="text-center mt-5">
+                    <button id="hide-more" class="btn btn-outline-dark">
+                        <i class="bi bi-eye-slash"></i> Hide
+                    </button>
                 </div>
             </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="row m-0 mt-5">
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/abstract-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Abstract Shirt</p>
-                    <p>₹1200</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt3.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹400</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/blend-shirt1.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Blend Shirt</p>
-                    <p>₹4500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-                <div class="col-sm-2">
-                    <img src="assets/Popular-image/check-shirt2.webp" height="100%" width="100%" alt="">
-                    <p class="m-0">Check Shirt</p>
-                    <p>₹1500</p>
-                </div>
-            </div>
-            <div class="text-center mt-5"><button id="hide-more" class="text-dark"><i
-                        class="bi bi-eye-slash"></i>Hide.....</button></div>
+
         </section>
+
 
         <!-- footer -->
         <footer>
             <section id="about" class="mt-5">
                 <div class="container-fluid p-5">
                     <h5>More about shopping At Snitch for men</h3>
-                        <p class="fw-bold fs-5">TOP Categories</p>
-                        <div class="div d-flex justify-content-between flex-wrap">
-                            <div class="d-flex flex-column">
-                                <a href="#">T-shirt</a>
-                                <a href="#">Blogs</a>
-                                <a href="#">CO-Ordes</a>
-                                <a href="#">Shoes</a>
+                        <!-- TOP CATEGORIES -->
+                        <p class="fw-bold fs-5">Top Categories</p>
+                        <div class="row gy-4">
+
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">T-shirt</a><br>
+                                <a href="#" class="nav-link">Blogs</a><br>
+                                <a href="#" class="nav-link">Co-Ords</a><br>
+                                <a href="#" class="nav-link">Shoes</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Shirt</a>
-                                <a href="#">Accesserios</a>
-                                <a href="#">Hoddies</a>
-                                <a href="#">Sunglasses</a>
+
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Shirt</a><br>
+                                <a href="#" class="nav-link">Accessories</a><br>
+                                <a href="#" class="nav-link">Hoodies</a><br>
+                                <a href="#" class="nav-link">Sunglasses</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Jogers</a>
-                                <a href="#">Belt</a>
-                                <a href="#">Jackets</a>
+
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Joggers</a><br>
+                                <a href="#" class="nav-link">Belts</a><br>
+                                <a href="#" class="nav-link">Jackets</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">shoes</a>
-                                <a href="#">bleaser</a>
-                                <a href="#">jeans</a>
+
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Shoes</a><br>
+                                <a href="#" class="nav-link">Blazer</a><br>
+                                <a href="#" class="nav-link">Jeans</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Touser</a>
-                                <a href="#">Boxers</a>
-                                <a href="#">Night Suit</a>
+
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Trousers</a><br>
+                                <a href="#" class="nav-link">Boxers</a><br>
+                                <a href="#" class="nav-link">Night Suit</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Sweet Shirt</a>
-                                <a href="#">Cargo Pants</a>
-                                <a href="#">Overshirts</a>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Sweaster</a>
-                                <a href="#">Chinoes</a>
-                                <a href="#">Perfumes</a>
+
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Sweatshirt</a><br>
+                                <a href="#" class="nav-link">Cargo Pants</a><br>
+                                <a href="#" class="nav-link">Overshirts</a>
                             </div>
                         </div>
                         <p class="fw-bold fs-5">Poular Searches</p>
-                        <div class="div d-flex justify-content-between flex-wrap">
-                            <div class="d-flex flex-column">
-                                <a href="#">Shirt for men</a>
-                                <a href="#">T-shirt for men</a>
-                                <a href="#">Hoodies for men</a>
-                                <a href="#">Shoes for men</a>
-                                <a href="#">Branded T-shirt for men</a>
-                                <a href="#">Trouser for men</a>
+                        <div class="row gy-4">
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Shirt for men</a>
+                                <a href="#" class="nav-link">T-shirt for men</a>
+                                <a href="#" class="nav-link">Hoodies for men</a>
+                                <a href="#" class="nav-link">Shoes for men</a>
+                                <a href="#" class="nav-link">Branded T-shirt for men</a>
+                                <a href="#" class="nav-link">Trouser for men</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Jackect for men</a>
-                                <a href="#">Accesserios for men</a>
-                                <a href="#">Hoddies for men</a>
-                                <a href="#">Sunglasses for men</a>
-                                <a href="#">Formal Shirt for men</a>
-                                <a href="#">Linen Shirt</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Jackect for men</a>
+                                <a href="#" class="nav-link">Accesserios for men</a>
+                                <a href="#" class="nav-link">Hoddies for men</a>
+                                <a href="#" class="nav-link">Sunglasses for men</a>
+                                <a href="#" class="nav-link">Formal Shirt for men</a>
+                                <a href="#" class="nav-link">Linen Shirt</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">JT-shirt</a>
-                                <a href="#">Baggy jeans mens</a>
-                                <a href="#">Sweetshirt</a>
-                                <a href="#">Oversize Shirt</a>
-                                <a href="#">check Shirt</a>
-                                <a href="#">Denim Jacket</a>
+                            <div class="col-6 col-md-4 col-lg-2 ">
+                                <a href="#" class="nav-link">JT-shirt</a>
+                                <a href="#" class="nav-link">Baggy jeans mens</a>
+                                <a href="#" class="nav-link">Sweetshirt</a>
+                                <a href="#" class="nav-link">Oversize Shirt</a>
+                                <a href="#" class="nav-link">check Shirt</a>
+                                <a href="#" class="nav-link">Denim Jacket</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">cargo</a>
-                                <a href="#">streight fit jeans</a>
-                                <a href="#">White Shirt for men</a>
-                                <a href="#">Denim</a>
-                                <a href="#">Casual Shirt for men</a>
-                                <a href="#">boggy pant for men</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">cargo</a>
+                                <a href="#" class="nav-link">streight fit jeans</a>
+                                <a href="#" class="nav-link">White Shirt for men</a>
+                                <a href="#" class="nav-link">Denim</a>
+                                <a href="#" class="nav-link">Casual Shirt for men</a>
+                                <a href="#" class="nav-link">boggy pant for men</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Baggy Jeans</a>
-                                <a href="#">Printed T-shirt for men</a>
-                                <a href="#">Printed shirt for men</a>
-                                <a href="#">Black Shirt</a>
-                                <a href="#">Linen Shirt</a>
-                                <a href="#">Chinos Shirt</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Baggy Jeans</a>
+                                <a href="#" class="nav-link">Printed T-shirt for men</a>
+                                <a href="#" class="nav-link">Printed shirt for men</a>
+                                <a href="#" class="nav-link">Black Shirt</a>
+                                <a href="#" class="nav-link">Linen Shirt</a>
+                                <a href="#" class="nav-link">Chinos Shirt</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Printed Shirt</a>
-                                <a href="#">Sweat polo T Shirt</a>
-                                <a href="#">Forrmal paint for men</a>
-                                <a href="#">Koearn paint</a>
-                                <a href="#">Black T-shirt for men</a>
-                                <a href="#">Formal Shirt for men</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Printed Shirt</a>
+                                <a href="#" class="nav-link">Sweat polo T Shirt</a>
+                                <a href="#" class="nav-link">Forrmal paint for men</a>
+                                <a href="#" class="nav-link">Koearn paint</a>
+                                <a href="#" class="nav-link">Black T-shirt for men</a>
+                                <a href="#" class="nav-link">Formal Shirt for men</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Polo T-Shirt</a>
-                                <a href="#">Formal Shirt for men</a>
-                                <a href="#">baggy Paint</a>
-                                <a href="#">Old Money outfit</a>
-                                <a href="#">Printed T-shirt for men</a>
-                                <a href="#">Clud Wear for men</a>
-                            </div>
+
                         </div>
                         <p class="fw-bold fs-5">Most Popular Accessories</p>
-                        <div class="div d-flex justify-content-between flex-wrap">
-                            <div class="d-flex flex-column">
-                                <a href="#">Ravenwood Braided</a>
-                                <a href="#">Divine Skull Cross</a>
-                                <a href="#">Debonair Black</a>
-                                <a href="#">Abstract Trio Metal</a>
-                                <a href="#">Rover Wrap Black</a>
-                                <a href="#">Bold Swirl</a>
-                                <a href="#">Wavecrest Dollar Brown</a>
+                        <div class="row gy-4">
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Ravenwood Braided</a>
+                                <a href="#" class="nav-link">Divine Skull Cross</a>
+                                <a href="#" class="nav-link">Debonair Black</a>
+                                <a href="#" class="nav-link">Abstract Trio Metal</a>
+                                <a href="#" class="nav-link">Rover Wrap Black</a>
+                                <a href="#" class="nav-link">Bold Swirl</a>
+                                <a href="#" class="nav-link">Wavecrest Dollar Brown</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">EternaWrap Black</a>
-                                <a href="#">Bar of Luxe Chain</a>
-                                <a href="#">Solid Block SS Chain</a>
-                                <a href="#">Rattle Square Chain</a>
-                                <a href="#">Mafia SS Chain</a>
-                                <a href="#">Grey Cuboid SS Chain</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">EternaWrap Black</a>
+                                <a href="#" class="nav-link">Bar of Luxe Chain</a>
+                                <a href="#" class="nav-link">Solid Block SS Chain</a>
+                                <a href="#" class="nav-link">Rattle Square Chain</a>
+                                <a href="#" class="nav-link">Mafia SS Chain</a>
+                                <a href="#" class="nav-link">Grey Cuboid SS Chain</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Obsidian Blue Braided</a>
-                                <a href="#">Rogue Bullet Pendant</a>
-                                <a href="#">Hyphenated Weave Braided</a>
-                                <a href="#">Blacksmith Nail Braided</a>
-                                <a href="#">Nobi Nail Edge Braided</a>
-                                <a href="#">Midnight Eclipse Braid</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Obsidian Blue Braided</a>
+                                <a href="#" class="nav-link">Rogue Bullet Pendant</a>
+                                <a href="#" class="nav-link">Hyphenated Weave Braided</a>
+                                <a href="#" class="nav-link">Blacksmith Nail Braided</a>
+                                <a href="#" class="nav-link">Nobi Nail Edge Braided</a>
+                                <a href="#" class="nav-link">Midnight Eclipse Braid</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Rustic Revolve</a>
-                                <a href="#">Pirate's Anchor</a>
-                                <a href="#">Metal Black Trio</a>
-                                <a href="#">Duo Gold & Silver</a>
-                                <a href="#">Hexa Beads</a>
-                                <a href="#">Black Cuboid</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Rustic Revolve</a>
+                                <a href="#" class="nav-link">Pirate's Anchor</a>
+                                <a href="#" class="nav-link">Metal Black Trio</a>
+                                <a href="#" class="nav-link">Duo Gold & Silver</a>
+                                <a href="#" class="nav-link">Hexa Beads</a>
+                                <a href="#" class="nav-link">Black Cuboid</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Ravenwood Braided</a>
-                                <a href="#">Divine Skull Cross</a>
-                                <a href="#">Debonair Black</a>
-                                <a href="#">Abstract Trio Metal</a>
-                                <a href="#">Rover Wrap Black</a>
-                                <a href="#">Bold Swirl</a>
-                                <a href="#">Wavecrest Dollar Brown</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Ravenwood Braided</a>
+                                <a href="#" class="nav-link">Divine Skull Cross</a>
+                                <a href="#" class="nav-link">Debonair Black</a>
+                                <a href="#" class="nav-link">Abstract Trio Metal</a>
+                                <a href="#" class="nav-link">Rover Wrap Black</a>
+                                <a href="#" class="nav-link">Bold Swirl</a>
+                                <a href="#" class="nav-link">Wavecrest Dollar Brown</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Obsidian Blue Braided</a>
-                                <a href="#">Rogue Bullet Pendant</a>
-                                <a href="#">Hyphenated Weave Braided</a>
-                                <a href="#">Blacksmith Nail Braided</a>
-                                <a href="#">Nobi Nail Edge Braided</a>
-                                <a href="#">Midnight Eclipse Braid</a>
+                            <div class="col-6 col-md-4 col-lg-2">
+                                <a href="#" class="nav-link">Obsidian Blue Braided</a>
+                                <a href="#" class="nav-link">Rogue Bullet Pendant</a>
+                                <a href="#" class="nav-link">Hyphenated Weave Braided</a>
+                                <a href="#" class="nav-link">Blacksmith Nail Braided</a>
+                                <a href="#" class="nav-link">Nobi Nail Edge Braided</a>
+                                <a href="#" class="nav-link">Midnight Eclipse Braid</a>
                             </div>
-                            <div class="d-flex flex-column">
-                                <a href="#">Sweaster</a>
-                                <a href="#">Chinoes</a>
-                                <a href="#">Perfumes</a>
-                            </div>
+
                         </div>
                         <p class="fw-bold fs-5">The SNITCH Shopping Experience – Where Digital Meets Style</p>
                         <p>At SNITCH, we redefine the modern shopping experience, merging seamless digital convenience
@@ -1129,59 +884,37 @@
                                 statement accessories, SNITCH has it all.</p>
                             <p>🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now! 🔥</p>
                         </div>
-                        <div class="mt-5 p-3">
-                            <p class="fw-bold fs-4">Company</p>
-                            <ul class="d-flex company justify-content-between">
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">About
-                                        Us</a></li>
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">Privacy
-                                        Policy
-                                    </a></li>
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">Term
-                                        and Condition</a>
-                                </li>
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">Retun
-                                        and Exchange Policy</a>
-                                </li>
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">contact
-                                        us</a>
-                                </li>
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">Site
-                                        Map</a>
-                                </li>
-                                <li class="nav-item" style="list-style: none;"><a href="#"
-                                        class="nav-link nav-item">Stakeholders</a>
-                                </li>
-                            </ul>
+                        <hr class="my-4">
+                        <!-- COMPANY -->
+                        <p class="fw-bold fs-5 text-center">Company</p>
+                        <div class="row text-center gy-2">
+                            <div class="col-6 col-md-2 col-lg-2"><a href="#" class="nav-link">About Us</a></div>
+                            <div class="col-6 col-md-2 col-lg-2"><a href="#" class="nav-link">Privacy Policy</a></div>
+                            <div class="col-6 col-md-2 col-lg-2"><a href="#" class="nav-link">T & C</a></div>
+                            <div class="col-6 col-md-2 col-lg-2"><a href="#" class="nav-link">Return Policy</a></div>
+                            <div class="col-6 col-md-2 col-lg-2"><a href="#" class="nav-link">Contact Us</a></div>
+                            <div class="col-6 col-md-2 col-lg-2"><a href="#" class="nav-link">Site Map</a></div>
                         </div>
 
                         <!-- social Icon -->
-                        <div class="d-flex justify-content-center gap-4">
-                            <a href="#" class="nav-link" style="color: #c45e3d;"><i class="bi bi-instagram"></i></a>
-                            <a href="#" class="nav-link" style="color: #c45e3d;"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="nav-link" style="color: #c45e3d;"><i class="bi bi-twitter"></i></a>
-                            <a href="#" class="nav-link" style="color: #c45e3d;"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="nav-link" style="color: #c45e3d;"><i class="bi bi-youtube"></i></a>
+                        <div class="d-flex justify-content-center gap-4 fs-4 mt-3">
+                            <a href="#" class="nav-link"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="nav-link"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="nav-link"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="nav-link"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="nav-link"><i class="bi bi-youtube"></i></a>
                         </div>
 
-                        <h3 class="text-center mt-4">Download App</h3>
-
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="nav-link"><img src="assets/slider-images/nnnnnnnnnnnnnnn.webp"
-                                    width="150px" height="100px" alt=""></a>
-                            <a href="#" class="nav-link"><img src="assets/slider-images/google-store.png" width="150px"
-                                    height="100px" alt=""></a>
+                        <h5 class="text-center mt-4">Download App</h5>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <img src="assets/slider-images/nnnnnnnnnnnnnnn.webp" width="140">
+                            <img src="assets/slider-images/google-store.png" width="140">
                         </div>
 
-                        <div class="d-flex justify-content-center pb-10">
-                            <p>© 2026 SNITCH. All rights reserved.</p>
-                        </div>
+                        <!-- COPYRIGHT -->
+                        <p class="text-center mt-4 mb-0">
+                            © 2026 SNITCH. All rights reserved.
+                        </p>
                 </div>
             </section>
             <section id="blanck"></section>
@@ -1191,7 +924,7 @@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">Categories</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
             </div>
