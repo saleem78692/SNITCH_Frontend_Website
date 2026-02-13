@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snitch Website - New Drops</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="assets/slider-images/Loading_black_1 - Copy.gif">
+    <link rel="stylesheet" href="assets/CSS/New-Drop.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0 m-0">
+        <!-- header -->
+        <header class="header">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
+                <div class="container-fluid px-3 px-lg-4 position-relative">
+
+                    <!-- MENU BUTTON (LEFT) -->
+                    <button class="btn btn-link link-dark p-0 border-0 me-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                    </button>
+
+                    <!-- LOGO (CENTER) -->
+                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="#">
+                        <img src="assets/slider-images/SNITCH_LOGO_NEW_BLACK.webp" class="logo-img" alt="Logo">
+                    </a>
+
+                    <!-- RIGHT ICONS -->
+                    <div class="d-flex align-items-center ms-auto">
+
+                        <!-- DESKTOP SEARCH -->
+                        <form class="d-none d-lg-flex me-3 position-relative">
+                            <div class="input-group">
+                                <span class="input-group-text bg-white border-end-0 rounded-0">
+                                    <img src="assets/slider-images/search-icon.svg" height="18" alt="">
+                                </span>
+                                <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
+                                    placeholder='Search "Overshirts"' style="width:200px;">
+                            </div>
+                        </form>
+
+                        <!-- MOBILE SEARCH ICON -->
+                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
+                            <i class="bi bi-search"></i>
+                        </a>
+
+                        <!-- USER -->
+                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="bi bi-person"></i>
+                        </a>
+
+                        <!-- CART -->
+                        <a href="cart.html" class="text-dark fs-4">
+                            <i class="bi bi-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- side Menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-center" id="offcanvasNavbarLabel">Categories</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="d-flex justify-content-between">
+                    <div><img src="assets/side-menu-img/side-1.webp" height="90px" width="90px" alt=""></div>
+                    <div><img src="assets/side-menu-img/side-2.webp" height="90px" width="90px" alt=""></div>
+                    <div><img src="assets/side-menu-img/side-3.webp" height="90px" width="90px" alt=""></div>
+                    <div><img src="assets/side-menu-img/side-4.webp" height="90px" width="90px" alt=""></div>
+                </div>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="New-Drops.html">New Drops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop-All.html">Shop All</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="BestSeller.html">Bestsellers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shirts.html">Shirts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="T-Shirt.html">T-Shirts || Polo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Jeans.html">Jeans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Tousers.html">Trousers</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Outerwear
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Outwear-Jackect.html">Jackets</a></li>
+                            <li><a class="dropdown-item" href="Outwear-Sweater.html">Coats</a></li>
+                            <li><a class="dropdown-item" href="Outwear-Hoddies.html">Hoodies</a></li>
+                            <li><a class="dropdown-item" href="Outwear-Sweater.html">Sweaters</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="shop-All.html">SHOP NOW</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Cargo-Paints.html">Cargo Paints</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Joggers.html">Jogarrs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Short.html">Shorts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Linen.html">Line Edit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Footwear.html">Footwear</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Perfumes.html">Perfumes <span
+                                style="color: #c45e3d; background-color: #fff; font-weight: bold;">50%
+                                off</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Caps-Muflar.html">Cap | Muflar | Bandana</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bags.html">Bags</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sunglasses.html">Sun Glasses <span
+                                style="color: #c45e3d; font-weight: bold;">New</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Belts.html">Belts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sale.html" style="color: #c45e3d;">Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="CoreLab.html">Core Lab <span
+                                style="color: #c45e3d; font-weight: bold;">Essential</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SNITCH-Plus.html">Snitch Plus <span
+                                style="color: #c45e3d; font-weight: bold;">Plus
+                                Size</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SNITCH-Luxe.html">Snitch Lux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gift-cards.html">Gift card</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row m-0">
+            <div class="col-sm-12 text-center mt-5">
+                <img src="assets/slider-images/empty_bag.png" alt="">
+                <p style="font-size: 20px; font-weight: bold;">YOUR BAG IS EMPTY</p>
+            </div>
+        </div>
+        <div class="row m-0">
+            <div class="col-sm-12 text-center">
+                <p>Your cart is ready to roll, but it's feeling a bit empty without some stylish finds</p>
+                <a target="_blank" href="Index.html" class="btn btn-dark"
+                    style="width: 400px; padding: 10px; border-radius: 0;">CONTINUE SHOPPING</a>
+                <a target="_blank" href="shop-All.html" class="btn btn-outline-dark"
+                    style="width: 400px; padding: 10px; border-radius: 0;">CADD TO CART</a>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content rounded-0 border-0 overflow-hidden">
+                    <div class="modal-header border-0 p-0 position-absolute end-0 top-0 z-3">
+                        <button type="button" class="btn-close m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-6 d-none d-md-block h-100">
+                                <img src="assets/side-menu-img/login.webp"
+                                    class="img-fluid h-100 w-100 object-fit-cover" alt="Login">
+                                <img src="assets/side-menu-img/login.webp"
+                                    class="img-fluid h-100 w-100 object-fit-cover" alt="Login">
+                            </div>
+                            <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                                <h4 class="modal-title fw-bold ls-2 mb-4" id="exampleModalLabel">LOGIN</h4>
+                                <form action="">
+                                    <div class="mb-4">
+                                        <label for="mobile" class="form-label text-uppercase fw-bold"
+                                            style="font-Size: 0.8rem;">Mobile Number</label>
+                                        <input type="tel" id="mobile"
+                                            class="form-control border-0 border-bottom rounded-0 shadow-none ps-0"
+                                            placeholder="+91">
+                                    </div>
+                                    <button class="btn btn-dark w-100 rounded-0 py-3 fw-bold ls-2 mb-3">REQUEST
+                                        OTP</button>
+                                    <p class="small text-muted text-center mb-0">
+                                        By signing in, I agree to the <a href="#"
+                                            class="text-dark text-decoration-underline">Terms of Use</a> and <a href="#"
+                                            class="text-dark text-decoration-underline">Privacy Policy</a>.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
