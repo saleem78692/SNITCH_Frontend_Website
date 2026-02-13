@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snitch Website - New Drops</title>
+    <title>D-TREYA - Wear your vibe</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -30,9 +30,10 @@
                     </button>
 
                     <!-- LOGO (CENTER) -->
-                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="#">
-                        <img src="assets/slider-images/SNITCH_LOGO_NEW_BLACK.webp" class="logo-img" alt="Logo">
+                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="Index.html">
+                        <img src="assets/side-menu-img/logo-2-removebg-preview.png" class="logo-custom" alt="Logo">
                     </a>
+
 
                     <!-- RIGHT ICONS -->
                     <div class="d-flex align-items-center ms-auto">
@@ -1168,7 +1169,8 @@
             </div>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade modal-tablet-res" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content rounded-0 border-0 overflow-hidden">
                     <div class="modal-header border-0 p-0 position-absolute end-0 top-0 z-3">
@@ -1177,10 +1179,8 @@
                     <div class="modal-body p-0">
                         <div class="row g-0 h-100">
                             <div class="col-md-6 d-none d-md-block h-100">
-                                <img src="assets/side-menu-img/login.webp"
-                                    class="img-fluid h-100 w-100 object-fit-cover" alt="Login">
-                                <img src="assets/side-menu-img/login.webp"
-                                    class="img-fluid h-100 w-100 object-fit-cover" alt="Login">
+                                <img src="assets/side-menu-img/login.webp" class="img-fluid object-fit-cover"
+                                    style="height: 380px; padding: 30px;" alt="Login">
                             </div>
                             <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
                                 <h4 class="modal-title fw-bold ls-2 mb-4" id="exampleModalLabel">LOGIN</h4>
@@ -1188,9 +1188,14 @@
                                     <div class="mb-4">
                                         <label for="mobile" class="form-label text-uppercase fw-bold"
                                             style="font-Size: 0.8rem;">Mobile Number</label>
-                                        <input type="tel" id="mobile"
-                                            class="form-control border-0 border-bottom rounded-0 shadow-none ps-0"
-                                            placeholder="+91">
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-white border-0 border-bottom rounded-0">
+                                                +91
+                                            </span>
+                                            <input type="tel" id="mobile"
+                                                class="form-control border-0 border-bottom rounded-0 shadow-none ps-1"
+                                                placeholder="Enter mobile number" maxlength="10">
+                                        </div>
                                     </div>
                                     <button class="btn btn-dark w-100 rounded-0 py-3 fw-bold ls-2 mb-3">REQUEST
                                         OTP</button>

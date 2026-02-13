@@ -2,6 +2,10 @@ body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
 }
 
+.header {
+    height: auto;
+}
+
 .ls-2 {
     letter-spacing: 2px;
 }
@@ -360,4 +364,25 @@ body {
 .filter-slider button.active {
     background: #212529;
     color: #fff;
+}
+
+
+.logo-custom {
+    height: 150px;
+    width: auto;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+
+@media (max-width: 992px) {
+    .logo-custom {
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-custom {
+        height: 80px;
+    }
 }
