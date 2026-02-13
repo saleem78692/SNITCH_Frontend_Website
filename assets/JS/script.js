@@ -13,3 +13,20 @@ hide.addEventListener("click", function () {
     document.getElementById("new-popular").style.display = "none";
     document.getElementById("view-more").style.display = "block";
 });
+
+
+const wrapper = document.getElementById('filterWrapper');
+
+let speed = 1;
+
+function autoScroll() {
+    wrapper.scrollLeft += speed;
+
+    if (wrapper.scrollLeft >= wrapper.scrollWidth - wrapper.clientWidth) {
+        wrapper.scrollLeft = 0;
+    }
+
+    requestAnimationFrame(autoScroll);
+}
+
+autoScroll();

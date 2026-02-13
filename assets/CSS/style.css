@@ -130,6 +130,9 @@ body {
         margin-top: 50px;
     }
 
+    .modal-tablet-res {
+        margin-left: 120px;
+    }
 
 
 }
@@ -334,4 +337,27 @@ body {
     .footer a {
         font-Size: 13px;
     }
+}
+
+.filter-slider-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.filter-slider {
+    display: inline-flex;
+    gap: 12px;
+    padding: 10px;
+    width: max-content;
+}
+
+.filter-slider-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-slider button.active {
+    background: #212529;
+    color: #fff;
 }
