@@ -25,3 +25,21 @@
         width: 100%;
     }
 }
+
+.contactUs-text:hover{
+ transform: translateX(10px);
+ transition: all 0.5s ease-in-out;
+ cursor: pointer;
+}
+@media (max-width: 992px) {
+    .contactUs-message{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .contactUs-message{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

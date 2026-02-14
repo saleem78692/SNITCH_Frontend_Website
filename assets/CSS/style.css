@@ -404,6 +404,9 @@ h3 {
         padding: 0 10px;
         margin-top: 35px;
     }
+    .information {
+        padding-left: 0;
+    }
    
 }
 
@@ -411,6 +414,9 @@ h3 {
     .footer-2 {
         padding: 0 10px;
 
+    }
+    .information {
+        padding: 0;
     }
    
 }
