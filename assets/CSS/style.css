@@ -155,6 +155,12 @@ h3 {
     .logo-img {
         height: 40px;
     }
+
+    .modal-tablet-res {
+        margin-left: 0;
+    }
+
+
 }
 
 #hero {
@@ -404,10 +410,11 @@ h3 {
         padding: 0 10px;
         margin-top: 35px;
     }
+
     .information {
         padding-left: 0;
     }
-   
+
 }
 
 @media(max-width:767px) {
@@ -415,8 +422,9 @@ h3 {
         padding: 0 10px;
 
     }
+
     .information {
         padding: 0;
     }
-   
+
 }
