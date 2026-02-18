@@ -15,9 +15,10 @@
 <body>
     <div class="container-fluid p-0 m-0">
 
+
         <!-- header -->
-        <header class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
+        <header class="header custom-header">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top shadow-sm">
                 <div class="container-fluid px-3 px-lg-4 position-relative">
 
                     <!-- MENU BUTTON (LEFT) -->
@@ -30,42 +31,48 @@
                         </svg>
                     </button>
 
-                    <!-- LOGO (CENTER) -->
-                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="Index.html">
-                        <img src="assets/Steals-images/logoW.png" class="logo-custom" style="height: 60px;" alt="Logo">
-                    </a>
+                    <!--CENTER -->
+                    <div class="navbar-brand position-absolute top-50 start-50 translate-middle">
+                        <!-- DESKTOP SEARCH -->
+                        <form class="d-flex me-3 position-relative search-container">
+                            <div class="input-group w-100">
+                                <span class="input-group-text bg-transparent border-0 ps-3">
+                                    <img src="assets/slider-images/search-icon.svg" height="20" alt="">
+                                </span>
+                                <input class="form-control border-0 shadow-none ps-2 search-input" type="search"
+                                    placeholder='Search "Overshirts"'>
+                            </div>
+                        </form>
+                    </div>
 
                     <!-- RIGHT ICONS -->
                     <div class="d-flex align-items-center ms-auto">
-
-                        <!-- DESKTOP SEARCH -->
-                        <form class="d-none d-lg-flex me-3 position-relative">
-                            <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 rounded-0">
-                                    <img src="assets/slider-images/search-icon.svg" height="18" alt="">
-                                </span>
-                                <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
-                                    placeholder='Search "Overshirts"' style="width:200px;">
-                            </div>
-                        </form>
-
-                        <!-- MOBILE SEARCH ICON -->
-                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
-                            <i class="bi bi-search"></i>
-                        </a>
-
                         <!-- USER -->
-                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" class="text-dark fs-3 me-3 nav-icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             <i class="bi bi-person"></i>
                         </a>
 
                         <!-- CART -->
-                        <a href="cart.html" class="text-dark fs-4">
+                        <a href="cart.html" class="text-dark fs-3 nav-icon">
                             <i class="bi bi-cart"></i>
                         </a>
                     </div>
                 </div>
             </nav>
+        </header>
+
+        <!-- Secondary Header (Navigation) -->
+        <header class="secondary-header" id="secondaryHeader">
+            <div class="container-fluid d-flex justify-content-center">
+                <ul class="nav-links d-flex gap-4 m-0 p-2 align-items-center">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="shop-All.html">Product</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contactUs.html">Contact Us</a></li>
+                </ul>
+            </div>
         </header>
 
 
@@ -204,40 +211,23 @@
         </section>
 
 
-        <!-- Steals -->
-        <section id="steal" class="mt-3">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold">Steals</h2>
-            </div>
-            <div class="container">
-                <div class="row m-0 mt-3 justify-content-center">
-                    <div class="col-6 col-md-3 col-lg-3">
-                        <img src="assets/Steals-images/perfume.webp" height="100%" width="100%" alt="">
-                    </div>
-                    <div class="col-6 col-md-3 col-lg-3">
-                        <img src="assets/Steals-images/sale.webp" height="100%" width="100%" alt="">
-                    </div>
-                    <div class="col-6 col-md-3 col-lg-3">
-                        <img src="assets/Steals-images/winter-call.webp" height="100%" width="100%" alt="">
-                    </div>
-                    <div class="col-6 col-md-3 col-lg-3">
-                        <img src="assets/Steals-images/shirts.webp" height="100%" width="100%" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- SHOP YOUR Size -->
-        <section id="SHOP-YOUR-Size" class="mt-4">
-            <div class="text-center mb-3">
-                <h2 class="fw-bold">SHOP YOUR SIZE</h2>
-            </div>
-            <div class="container-fluid">
-                <div class="row m-0 mt-3 justify-content-center">
-                    <div class="col-sm-12">
-                        <video autoplay muted loop src="assets/slider-images/video.mp4" height="100%" width="100%"
-                            alt="">
-                    </div>
+        <div class="text-center mb-3 mt-5">
+            <h2 class="fw-bold">SHOP YOUR SIZE</h2>
+        </div>
+        <section id="shop-video">
+            <div class="row g-0 h-100 shadow shop-video-container">
+                <div class="col-lg-6 col-md-12 col-sm-12 shop-video-col">
+                    <video autoplay muted loop src="assets/slider-images/video.mp4" class="shop-video-element" alt="">
+                </div>
+                <div
+                    class="col-lg-6 col-md-12 col-sm-12 shop-text-col d-flex flex-column align-items-center justify-content-center">
+                    <p class="shop-video-title">THE T-SHIRT WORLD OF D-TYERA</p>
+                    <p class="shop-video-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint amet
+                        architecto ut, tempora, dignissimos quae, sapiente consequuntur facere ad laudantium recusandae
+                        aliquid molestias minima. Quia minus explicabo at perferendis ea.</p>
                 </div>
             </div>
         </section>
@@ -295,31 +285,35 @@
                     <!-- PRODUCT CARD -->
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <a href="../cargo-paints/abstract-shirt.html"><img
+                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
                             <p class="product-name">Abstract Shirt</p>
-                            <p class="product-price">₹1200</p>
+                            <p class="product-price">₹999</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹500</p>
+                            <p class="product-price">₹599</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <a href="../cargo-paints/check-shirt.html"><img src="assets/Popular-image/check-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Check Shirt</p>
-                            <p class="product-price">₹400</p>
+                            <p class="product-price">₹1,499</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <a href="../cargo-paints/fit-shirt.html"><img src="assets/Popular-image/fit-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Fit Shirt</p>
                             <p class="product-price">₹4500</p>
                         </div>
@@ -327,7 +321,8 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <a href="../cargo-paints/coat-shirt.html"><img src="assets/Popular-image/coat-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Coat Shirt</p>
                             <p class="product-price">₹1500</p>
                         </div>
@@ -335,38 +330,44 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <a href="../cargo-paints/cotton-shirt.html"><img
+                                    src="assets/Popular-image/cotton-shirt.webp" alt=""></a>
                             <p class="product-name">Cotton Shirt</p>
-                            <p class="product-price">₹1500</p>
+                            <p class="product-price">₹1,299</p>
                         </div>
                     </div>
+
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <a href="../cargo-paints/abstract-shirt.html"><img
+                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
                             <p class="product-name">Abstract Shirt</p>
-                            <p class="product-price">₹1200</p>
+                            <p class="product-price">₹999</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹500</p>
+                            <p class="product-price">₹599</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <a href="../cargo-paints/check-shirt.html"><img src="assets/Popular-image/check-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Check Shirt</p>
-                            <p class="product-price">₹400</p>
+                            <p class="product-price">₹1,499</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <a href="../cargo-paints/fit-shirt.html"><img src="assets/Popular-image/fit-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Fit Shirt</p>
                             <p class="product-price">₹4500</p>
                         </div>
@@ -374,7 +375,8 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <a href="../cargo-paints/coat-shirt.html"><img src="assets/Popular-image/coat-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Coat Shirt</p>
                             <p class="product-price">₹1500</p>
                         </div>
@@ -382,38 +384,45 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <a href="../cargo-paints/cotton-shirt.html"><img
+                                    src="assets/Popular-image/cotton-shirt.webp" alt=""></a>
                             <p class="product-name">Cotton Shirt</p>
-                            <p class="product-price">₹1500</p>
+                            <p class="product-price">₹1,299</p>
                         </div>
                     </div>
+
+
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <a href="../cargo-paints/abstract-shirt.html"><img
+                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
                             <p class="product-name">Abstract Shirt</p>
-                            <p class="product-price">₹1200</p>
+                            <p class="product-price">₹999</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹500</p>
+                            <p class="product-price">₹599</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <a href="../cargo-paints/check-shirt.html"><img src="assets/Popular-image/check-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Check Shirt</p>
-                            <p class="product-price">₹400</p>
+                            <p class="product-price">₹1,499</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <a href="../cargo-paints/fit-shirt.html"><img src="assets/Popular-image/fit-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Fit Shirt</p>
                             <p class="product-price">₹4500</p>
                         </div>
@@ -421,7 +430,8 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <a href="../cargo-paints/coat-shirt.html"><img src="assets/Popular-image/coat-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Coat Shirt</p>
                             <p class="product-price">₹1500</p>
                         </div>
@@ -429,39 +439,45 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <a href="../cargo-paints/cotton-shirt.html"><img
+                                    src="assets/Popular-image/cotton-shirt.webp" alt=""></a>
                             <p class="product-name">Cotton Shirt</p>
-                            <p class="product-price">₹1500</p>
+                            <p class="product-price">₹1,299</p>
                         </div>
                     </div>
 
+
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <a href="../cargo-paints/abstract-shirt.html"><img
+                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
                             <p class="product-name">Abstract Shirt</p>
-                            <p class="product-price">₹1200</p>
+                            <p class="product-price">₹999</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
+                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹500</p>
+                            <p class="product-price">₹599</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
+                            <a href="../cargo-paints/check-shirt.html"><img src="assets/Popular-image/check-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Check Shirt</p>
-                            <p class="product-price">₹400</p>
+                            <p class="product-price">₹1,499</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <a href="../cargo-paints/fit-shirt.html"><img src="assets/Popular-image/fit-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Fit Shirt</p>
                             <p class="product-price">₹4500</p>
                         </div>
@@ -469,7 +485,8 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
+                            <a href="../cargo-paints/coat-shirt.html"><img src="assets/Popular-image/coat-shirt.webp"
+                                    alt=""></a>
                             <p class="product-name">Coat Shirt</p>
                             <p class="product-price">₹1500</p>
                         </div>
@@ -477,105 +494,10 @@
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
+                            <a href="../cargo-paints/cotton-shirt.html"><img
+                                    src="assets/Popular-image/cotton-shirt.webp" alt=""></a>
                             <p class="product-name">Cotton Shirt</p>
-                            <p class="product-price">₹1500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
-                            <p class="product-name">Abstract Shirt</p>
-                            <p class="product-price">₹1200</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                            <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                            <p class="product-name">Check Shirt</p>
-                            <p class="product-price">₹400</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                            <p class="product-name">Fit Shirt</p>
-                            <p class="product-price">₹4500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                            <p class="product-name">Coat Shirt</p>
-                            <p class="product-price">₹1500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                            <p class="product-name">Cotton Shirt</p>
-                            <p class="product-price">₹1500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
-                            <p class="product-name">Abstract Shirt</p>
-                            <p class="product-price">₹1200</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                            <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                            <p class="product-name">Check Shirt</p>
-                            <p class="product-price">₹400</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                            <p class="product-name">Fit Shirt</p>
-                            <p class="product-price">₹4500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                            <p class="product-name">Coat Shirt</p>
-                            <p class="product-price">₹1500</p>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                            <p class="product-name">Cotton Shirt</p>
-                            <p class="product-price">₹1500</p>
+                            <p class="product-price">₹1,299</p>
                         </div>
                     </div>
 
@@ -600,55 +522,114 @@
             <div class="container-fluid">
                 <div class="row g-3">
 
-                    <!-- PRODUCT -->
+                    <!-- PRODUCT CARD -->
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/abstract-shirt.webp" alt="">
-                            <p class="m-0">Abstract Shirt</p>
-                            <p>₹1200</p>
+                            <a href="../cargo-paints/abstract-shirt.html"><img
+                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹999</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                            <p class="m-0">Blend Shirt</p>
-                            <p>₹500</p>
+                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹599</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                            <p class="m-0">Check Shirt</p>
-                            <p>₹400</p>
+                            <a href="../cargo-paints/check-shirt.html"><img src="assets/Popular-image/check-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹1,499</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/blend-shirt1.webp" alt="">
-                            <p class="m-0">Blend Shirt</p>
-                            <p>₹4500</p>
+                            <a href="../cargo-paints/fit-shirt.html"><img src="assets/Popular-image/fit-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt.webp" alt="">
-                            <p class="m-0">Check Shirt</p>
-                            <p>₹1500</p>
+                            <a href="../cargo-paints/coat-shirt.html"><img src="assets/Popular-image/coat-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
                         <div class="product-card">
-                            <img src="assets/Popular-image/check-shirt2.webp" alt="">
-                            <p class="m-0">Check Shirt</p>
-                            <p>₹1500</p>
+                            <a href="../cargo-paints/cotton-shirt.html"><img
+                                    src="assets/Popular-image/cotton-shirt.webp" alt=""></a>
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1,299</p>
+                        </div>
+                    </div>
+                    <!-- PRODUCT CARD -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <a href="../cargo-paints/abstract-shirt.html"><img
+                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹999</p>
                         </div>
                     </div>
 
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Blend Shirt</p>
+                            <p class="product-price">₹599</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <a href="../cargo-paints/check-shirt.html"><img src="assets/Popular-image/check-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Check Shirt</p>
+                            <p class="product-price">₹1,499</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <a href="../cargo-paints/fit-shirt.html"><img src="assets/Popular-image/fit-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Fit Shirt</p>
+                            <p class="product-price">₹4500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <a href="../cargo-paints/coat-shirt.html"><img src="assets/Popular-image/coat-shirt.webp"
+                                    alt=""></a>
+                            <p class="product-name">Coat Shirt</p>
+                            <p class="product-price">₹1500</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="product-card">
+                            <a href="../cargo-paints/cotton-shirt.html"><img
+                                    src="assets/Popular-image/cotton-shirt.webp" alt=""></a>
+                            <p class="product-name">Cotton Shirt</p>
+                            <p class="product-price">₹1,299</p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- VIEW MORE -->
