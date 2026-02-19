@@ -32,27 +32,35 @@
                     </button>
 
                     <!--CENTER -->
-                    <div class="navbar-brand position-absolute top-50 start-50 translate-middle">
+                    <div
+                        class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-3">
+                        <!--position-absolute top-50 start-50 translate-middle-->
                         <!-- DESKTOP SEARCH -->
-                        <form class="d-flex me-3 position-relative search-container">
-                            <div class="input-group w-100">
+                        <form class="d-flex position-relative search-container SearchForm">
+                            <div class="input-group">
                                 <span class="input-group-text bg-transparent border-0 ps-3">
                                     <img src="assets/slider-images/search-icon.svg" height="20" alt="">
                                 </span>
                                 <input class="form-control border-0 shadow-none ps-2 search-input" type="search"
-                                    placeholder='Search "Overshirts"'>
+                                    placeholder='Search "Overshirts"' />
+
                             </div>
                         </form>
-                    </div>
-
-                    <!-- RIGHT ICONS -->
-                    <div class="d-flex align-items-center ms-auto">
                         <!-- USER -->
-                        <a href="#" class="text-dark fs-3 me-3 nav-icon" data-bs-toggle="modal"
+                        <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                             <i class="bi bi-person"></i>
                         </a>
 
+                    </div>
+
+
+                    <!-- RIGHT ICONS -->
+                    <div class="d-flex align-items-center ms-auto gap-3">
+
+                        <a href="#" class="text-dark fs-3 nav-icon">
+                            <i class="bi bi-bag-heart"></i>
+                        </a>
                         <!-- CART -->
                         <a href="cart.html" class="text-dark fs-3 nav-icon">
                             <i class="bi bi-cart"></i>
@@ -213,24 +221,7 @@
 
 
 
-        <!-- SHOP YOUR Size -->
-        <div class="text-center mb-3 mt-5">
-            <h2 class="fw-bold">SHOP YOUR SIZE</h2>
-        </div>
-        <section id="shop-video">
-            <div class="row g-0 h-100 shadow shop-video-container">
-                <div class="col-lg-6 col-md-12 col-sm-12 shop-video-col">
-                    <video autoplay muted loop src="assets/slider-images/video.mp4" class="shop-video-element" alt="">
-                </div>
-                <div
-                    class="col-lg-6 col-md-12 col-sm-12 shop-text-col d-flex flex-column align-items-center justify-content-center">
-                    <p class="shop-video-title">THE T-SHIRT WORLD OF D-TYERA</p>
-                    <p class="shop-video-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint amet
-                        architecto ut, tempora, dignissimos quae, sapiente consequuntur facere ad laudantium recusandae
-                        aliquid molestias minima. Quia minus explicabo at perferendis ea.</p>
-                </div>
-            </div>
-        </section>
+
 
         <!-- NEW AND POPULAR -->
         <section id="new-and-popular" class="mt-4">
@@ -640,6 +631,25 @@
                 </div>
             </div>
 
+        </section>
+
+        <!-- SHOP YOUR Size -->
+        <div class="text-center mb-3 mt-5">
+            <h2 class="fw-bold">SHOP YOUR SIZE</h2>
+        </div>
+        <section id="shop-video">
+            <div class="row g-0 h-100 shadow shop-video-container">
+                <div class="col-lg-6 col-md-12 col-sm-12 shop-video-col">
+                    <video autoplay muted loop src="assets/slider-images/video.mp4" class="shop-video-element" alt="">
+                </div>
+                <div
+                    class="col-lg-6 col-md-12 col-sm-12 shop-text-col d-flex flex-column align-items-center justify-content-center">
+                    <p class="shop-video-title">THE T-SHIRT WORLD OF D-TYERA</p>
+                    <p class="shop-video-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint amet
+                        architecto ut, tempora, dignissimos quae, sapiente consequuntur facere ad laudantium recusandae
+                        aliquid molestias minima. Quia minus explicabo at perferendis ea.</p>
+                </div>
+            </div>
         </section>
 
 
