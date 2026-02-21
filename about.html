@@ -16,8 +16,8 @@
 <body>
     <div class="container-fluid p-0 m-0">
         <!-- header -->
-        <header class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
+        <header class="header custom-header">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm" style="height: 55px;">
                 <div class="container-fluid px-3 px-lg-4 position-relative">
 
                     <!-- MENU BUTTON (LEFT) -->
@@ -30,44 +30,39 @@
                         </svg>
                     </button>
 
-                    <!-- LOGO (CENTER) -->
-                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="Index.html">
-                        <img src="assets/side-menu-img/logo-2-removebg-preview.png" class="logo-custom" alt="Logo">
-                    </a>
-
-
-                    <!-- RIGHT ICONS -->
-                    <div class="d-flex align-items-center ms-auto">
-
+                    <!--CENTER -->
+                    <div
+                        class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-3 p-5">
                         <!-- DESKTOP SEARCH -->
-                        <form class="d-none d-lg-flex me-3 position-relative">
-                            <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 rounded-0">
-                                    <img src="assets/slider-images/search-icon.svg" height="18" alt="">
+                        <form class="d-flex position-relative search-container SearchForm">
+                            <div class="input-group ">
+                                <span class="input-group-text bg-transparent border-0 ps-3">
+                                    <img src="assets/slider-images/search-icon.svg" height="20" alt="">
                                 </span>
-                                <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
-                                    placeholder='Search "Overshirts"' style="width:200px;">
+                                <input class="form-control border-0 shadow-none ps-2 search-input" type="search"
+                                    placeholder='Search "Overshirts"' />
+
                             </div>
                         </form>
-
-                        <!-- MOBILE SEARCH ICON -->
-                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
-                            <i class="bi bi-search"></i>
-                        </a>
-
                         <!-- USER -->
-                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             <i class="bi bi-person"></i>
                         </a>
-
+                        <a href="#" class="text-dark fs-3 nav-icon">
+                            <i class="bi bi-bag-heart"></i>
+                        </a>
                         <!-- CART -->
-                        <a href="cart.html" class="text-dark fs-4">
+                        <a href="cart.html" class="text-dark fs-3 nav-icon">
                             <i class="bi bi-cart"></i>
                         </a>
+
                     </div>
                 </div>
             </nav>
         </header>
+
+
 
         <!-- side Menu -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
@@ -226,12 +221,13 @@
             </div>
 
         </div>
+        
 
-        <footer style="background-color: #f7eee8;">
+        <footer>
             <!-- COMPANY -->
             <h2 class="fw-bold text-center">Company</h2>
 
-            <div class="row m-0 p-4 mt-3 align-items-center">
+            <div class="row m-0 p-4 mt-3">
                 <div class="col-sm-12 footer-2 col-md-6 col-lg-3" style="line-height: 35px;">
                     <div class="text-center"><img src="assets/side-menu-img/og-image.png" height="200px" width="200px"
                             class="img-fluid" alt=""></div>
@@ -249,12 +245,15 @@
                 <div class="col-sm-12 footer-2 col-md-6 col-lg-3">
                     <div>
                         <p class="fw-bold fs-4"><u
-                                style="text-decoration-color: #c45e3d; text-underline-offset: 10px;">Inform</u>ation</p>
+                                style="text-decoration-color: #c45e3d; text-underline-offset: 10px;">Inform</u>ation
+                        </p>
                     </div>
                     <div style="line-height: 40px;">
                         <a href="about.html" class="nav-link fw-bold menu-f d-block">About Us</a>
-                        <a href="Privcy-Policy.html" class="nav-link fw-bold menu-f d-block">Privacy Policy</a>
-                        <a href="Term&Condition.html" class="nav-link fw-bold menu-f d-block">Terms & Condition</a>
+                        <a href="Privcy-Policy.html" class="nav-link fw-bold menu-f d-block">Privacy
+                            Policy</a>
+                        <a href="Term&Condition.html" class="nav-link fw-bold menu-f d-block">Terms &
+                            Condition</a>
                         <a href="Return.html" class="nav-link fw-bold menu-f d-block">Return</a>
                         <a href="contactUs.html" class="nav-link fw-bold menu-f d-block">Contact</a>
                         <a href="siteMap.html" class="nav-link fw-bold menu-f d-block">Site Map</a>
@@ -263,15 +262,20 @@
                 <div class="col-sm-12 footer-2 col-md-6 col-lg-3">
                     <div>
                         <p class="fw-bold fs-4"><u
-                                style="text-decoration-color: #c45e3d; text-underline-offset: 10px;">Cont</u>act Us</p>
+                                style="text-decoration-color: #c45e3d; text-underline-offset: 10px;">Cont</u>act
+                            Us</p>
                     </div>
                     <div style="line-height: 40px;">
                         <div><a href="tel:+917310126250" class="nav-link fw-bold"><i class="bi bi-telephone"
-                                    style="color: #c45e3d;"></i> +91 7310126250</a></div>
+                                    style="color: #c45e3d;"></i> +91
+                                7310126250</a></div>
                         <div><a href="mailto:xyz@gmail.com" class="nav-link fw-bold"><i class="bi bi-envelope"
-                                    style="color: #c45e3d;"></i> xyz@gmail.com</a></div>
+                                    style="color: #c45e3d;"></i>
+                                xyz@gmail.com</a>
+                        </div>
                         <div><a href="https://techsaleem.netlify.app/" class="nav-link fw-bold"><i class="bi bi-globe"
-                                    style="color: #c45e3d;"></i> www.xyz.com </a></div>
+                                    style="color: #c45e3d;"></i> www.xyz.com </a>
+                        </div>
                         <div><a href="#" class="nav-link fw-bold"><i class="bi bi-geo-alt" style="color: #c45e3d;"></i>
                                 INDIA</a></div>
 
@@ -280,7 +284,8 @@
                 <div class="col-sm-12 footer-2 col-md-6 col-lg-3">
                     <div>
                         <p class="fw-bold fs-4"><u
-                                style="text-decoration-color: #c45e3d; text-underline-offset: 10px;">Follow</u> Us</p>
+                                style="text-decoration-color: #c45e3d; text-underline-offset: 10px;">Follow</u>
+                            Us</p>
                     </div>
                     <div class="d-flex gap-3 social fs-4">
                         <a href="#" class="nav-link"><i class="bi bi-instagram" style="color: #c45e3d;"></i></a>
@@ -302,11 +307,13 @@
                 </div>
             </div>
             <hr>
-            <!-- COPYRIGHT -->
-            <p class="text-center  mb-0 fw-bold">
-                © 2026 D-TREYA. All rights reserved.
-            </p>
         </footer>
+        <!-- COPYRIGHT -->
+        <p class="text-center  mb-0 fw-bold">
+            © 2026 D-TREYA. All rights reserved.
+        </p>
+
+
         <!-- Modal -->
         <div class="modal fade modal-tablet-res" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">

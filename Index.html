@@ -19,11 +19,11 @@
         <!-- header -->
         <header class="header custom-header">
             <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm" style="height: 55px;">
-                <div class="container-fluid px-3 px-lg-4 position-relative">
+                <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center">
 
-                    <!-- MENU BUTTON (LEFT) -->
-                    <button class="btn btn-link link-dark p-0 border-0 me-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar">
+                    <!-- MENU BUTTON - Visible on mobile/tablet (below 992px) -->
+                    <button class="btn btn-link link-dark p-0 border-0 me-2 menu-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -32,10 +32,9 @@
                     </button>
 
                     <!--CENTER -->
-                    <div
-                        class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-3 p-5">
-                        <!-- DESKTOP SEARCH -->
-                        <form class="d-flex position-relative search-container SearchForm">
+                    <div class="navbar-brand d-flex align-items-center gap-3">
+                        <!-- Search - Visible on desktop (992px and above) -->
+                        <form class="d-none d-lg-flex position-relative search-container SearchForm">
                             <div class="input-group ">
                                 <span class="input-group-text bg-transparent border-0 ps-3">
                                     <img src="assets/slider-images/search-icon.svg" height="20" alt="">
@@ -45,6 +44,8 @@
 
                             </div>
                         </form>
+                        
+                        <!-- Icons - Always visible -->
                         <!-- USER -->
                         <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
@@ -80,6 +81,13 @@
         <!-- HERO SECTION -->
         <section id="hero">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
 
                 <div class="carousel-inner">
 
@@ -275,20 +283,28 @@
 
                     <!-- PRODUCT CARD -->
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <a href="../cargo-paints/abstract-shirt.html"><img
-                                    src="assets/Popular-image/abstract-shirt.webp" alt=""></a>
+                        <div class="product-card product-container">
+                            <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                             <p class="product-name">Abstract Shirt</p>
                             <p class="product-price">₹999</p>
+                            <!-- Hover Image -->
+                            <div class="hover-img">
+                                <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                <a href="#"><i class="bi bi-cart"></i></a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="product-card">
-                            <a href="../cargo-paints/blend-shirt.html"><img src="assets/Popular-image/blend-shirt.webp"
-                                    alt=""></a>
-                            <p class="product-name">Blend Shirt</p>
-                            <p class="product-price">₹599</p>
+                        <div class="product-card product-container">
+                            <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                            <p class="product-name">Abstract Shirt</p>
+                            <p class="product-price">₹999</p>
+                            <!-- Hover Image -->
+                            <div class="hover-img">
+                                <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                <a href="#"><i class="bi bi-cart"></i></a>
+                            </div>
                         </div>
                     </div>
 
@@ -1054,8 +1070,8 @@
                         </ul>
 
                         <div style="background-color: white; padding: 20px;">
-                            <p class="fs-4">Why Shop at SNITCH?</p>
-                            <ul>
+                            <p class="fs-4 text-dark">Why Shop at SNITCH?</p>
+                            <ul class="text-dark">
                                 <li><a href="#" class="nav-link">✔ Contemporary Menswear That Keeps Up with You</a></li>
                                 <li><a href="#" class="nav-link">✔ Effortless Online & In-Store Shopping Experience</a>
                                 </li>
@@ -1064,18 +1080,18 @@
                                 <li><a href="#" class="nav-link">✔ Style That Speaks Volumes</a></li>
                                 <li><a href="#" class="nav-link">✔ Sizes That Fit Every Man</a></li>
                             </ul>
-                            <p>Your wardrobe should work as hard as you do. SNITCH makes fashion easy, exciting, and
+                            <p class="text-dark">Your wardrobe should work as hard as you do. SNITCH makes fashion easy, exciting, and
                                 accessible—whether you're scrolling from your couch or styling in-store.</p>
                         </div>
 
                         <div style="background-color: white; padding: 20px; margin-top: 30px;">
-                            <p class="fs-4">Upgrade Your Shopping Experience – Explore SNITCH Today!</p>
-                            <p>Ready to redefine your wardrobe? Shop the latest men's fashion online or visit your
+                            <p class="fs-4 text-dark">Upgrade Your Shopping Experience – Explore SNITCH Today!</p>
+                            <p class="text-dark">Ready to redefine your wardrobe? Shop the latest men's fashion online or visit your
                                 nearest
                                 store for a hands-on experience. From effortless joggers and co-ords to bold sunglasses
                                 and
                                 statement accessories, SNITCH has it all.</p>
-                            <p>🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now! 🔥</p>
+                            <p class="text-dark">🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now! 🔥</p>
                         </div>
                         <hr class="my-4">
 
@@ -1177,7 +1193,6 @@
                         </p>
                 </div>
             </section>
-            <section id="blanck"></section>
         </footer>
 
         <!-- side Menu -->

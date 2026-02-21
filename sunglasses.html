@@ -15,8 +15,8 @@
 <body>
     <div class="container-fluid p-0 m-0">
         <!-- header -->
-        <header class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
+        <header class="header custom-header">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm" style="height: 55px;">
                 <div class="container-fluid px-3 px-lg-4 position-relative">
 
                     <!-- MENU BUTTON (LEFT) -->
@@ -29,44 +29,38 @@
                         </svg>
                     </button>
 
-                    <!-- LOGO (CENTER) -->
-                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="Index.html">
-                        <img src="assets/side-menu-img/logo-2-removebg-preview.png" class="logo-custom" alt="Logo">
-                    </a>
-
-
-                    <!-- RIGHT ICONS -->
-                    <div class="d-flex align-items-center ms-auto">
-
+                    <!--CENTER -->
+                    <div
+                        class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-3 p-5">
                         <!-- DESKTOP SEARCH -->
-                        <form class="d-none d-lg-flex me-3 position-relative">
-                            <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 rounded-0">
-                                    <img src="assets/slider-images/search-icon.svg" height="18" alt="">
+                        <form class="d-flex position-relative search-container SearchForm">
+                            <div class="input-group ">
+                                <span class="input-group-text bg-transparent border-0 ps-3">
+                                    <img src="assets/slider-images/search-icon.svg" height="20" alt="">
                                 </span>
-                                <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
-                                    placeholder='Search "Overshirts"' style="width:200px;">
+                                <input class="form-control border-0 shadow-none ps-2 search-input" type="search"
+                                    placeholder='Search "Overshirts"' />
+
                             </div>
                         </form>
-
-                        <!-- MOBILE SEARCH ICON -->
-                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
-                            <i class="bi bi-search"></i>
-                        </a>
-
                         <!-- USER -->
-                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             <i class="bi bi-person"></i>
                         </a>
-
+                        <a href="#" class="text-dark fs-3 nav-icon">
+                            <i class="bi bi-bag-heart"></i>
+                        </a>
                         <!-- CART -->
-                        <a href="cart.html" class="text-dark fs-4">
+                        <a href="cart.html" class="text-dark fs-3 nav-icon">
                             <i class="bi bi-cart"></i>
                         </a>
+
                     </div>
                 </div>
             </nav>
         </header>
+
         <header class="offer">
             <div class="row m-0 mt-2">
                 <div class="col-sm-12 col-md-12 col-lg-12 bg-dark">
@@ -76,6 +70,9 @@
                 </div>
             </div>
         </header>
+
+
+
         <!-- side Menu -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
@@ -123,7 +120,7 @@
                             <li><a class="dropdown-item" href="Outwear-Jackect.html">Jackets</a></li>
                             <li><a class="dropdown-item" href="Outwear-Sweater.html">Coats</a></li>
                             <li><a class="dropdown-item" href="Outwear-Hoddies.html">Hoodies</a></li>
-                            <li><a class="dropdown-item" href="Outwear-Sweater.html">Sweaters</a></li>
+                            <li><a class="dropdown-item" href="Outwear-Hoddies.html">Sweaters</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -189,7 +186,11 @@
             </div>
         </div>
 
+        <!-- Filter  -->
+
         <div class="row m-0">
+
+
             <div class="col-sm-3 filter-sidebar">
                 <div class="row m-0">
                     <div class="col-12">
@@ -207,29 +208,6 @@
                         </div>
                         <hr>
 
-                        <!-- CATEGORY -->
-                        <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-                            data-bs-target="#category" style="cursor:pointer;">
-                            <div>Category</div>
-                            <i class="bi bi-plus-lg"></i>
-                        </div>
-
-                        <div class="collapse mt-2" id="category">
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Shirts</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">T-Shirts</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Jackets</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Perfumes</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Cap | Muflar | Bandana</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Bags</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Sun Glasses</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Belts</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Sale</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Core Lab</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Snitch Plus</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Snitch Lux</button>
-                            <button class="btn btn-outline-secondary btn-sm mb-1">Gift card</button>
-                        </div>
-                        <hr>
 
                         <!-- Size -->
                         <div class="d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
@@ -415,32 +393,27 @@
 
                         <div class="collapse mt-2 d-flex justify-content-between actio-btn">
                             <button class="btn btn-outline-dark btn-sm">Clear All</button>
-                            <button class="btn btn-dark btn-sm">APPLY ALL (9772)</button>
+                            <button class="btn btn-dark btn-sm">APPLY ALL (346)</button>
                         </div>
 
                     </div>
                 </div>
             </div>
 
+
             <div class="col-sm-9 product-content mt-5">
 
                 <!-- NEW AND POPULAR -->
-                <section id="newmm-and-popular" class="mt-5">
+                <section id="newmm-and-popular" style="margin-top: -10px;">
                     <div class="row m-0">
                         <div class="col-sm-12">
 
-                            <h3 class="float-start fs-4">Sunglasses</h3>
+                            <h3 class="float-start fs-4">Cargo Paints</h3>
                             <select name="" id="" class="form-select w-25 float-end">
                                 <option value="">All</option>
-                                <option value="">Shirts</option>
-                                <option value="">Jeans</option>
-                                <option value="">T-Shirts</option>
-                                <option value="">Trousers</option>
-                                <option value="">Jackets</option>
-                                <option value="">Sweater</option>
-                                <option value="">Hoodies</option>
-                                <option value="">Perfumes</option>
-                                <option value="">Shoes</option>
+                                <option value="">New</option>
+                                <option value="">Price : Low to High</option>
+                                <option value="">Price : High to Low</option>
                             </select>
 
                         </div>
@@ -450,16 +423,16 @@
                     <div class="row m-0">
 
                         <div class="col-12 col-md-12 col-lg-12">
-                            <button class="btn btn-outline-dark btn-sm active mb-2">All</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Shirts</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Jeans</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">T-Shirts</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Trousers</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Jackets</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Sweater</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Hoodies</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Perfumes</button>
-                            <button class="btn btn-outline-dark btn-sm mb-2">Shoes</button>
+                            <a href="Cargo-Paints.html" class="btn btn-outline-dark btn-sm active mb-2">All</a>
+                            <a href="shirts.html" class="btn btn-outline-dark btn-sm mb-2">Shirts</a>
+                            <a href="Jeans.html" class="btn btn-outline-dark btn-sm mb-2">Jeans</a>
+                            <a href="T-Shirt.html" class="btn btn-outline-dark btn-sm mb-2">T-Shirts</a>
+                            <a href="Tousers.html" class="btn btn-outline-dark btn-sm mb-2">Trousers</a>
+                            <a href="Outwear-Jackect.html" class="btn btn-outline-dark btn-sm mb-2">Jackets</a>
+                            <a href="Outwear-Sweater.html" class="btn btn-outline-dark btn-sm mb-2">Sweater</a>
+                            <a href="Cargo-Paints.html" class="btn btn-outline-dark btn-sm mb-2">Hoodies</a>
+                            <a href="Perfumes.html" class="btn btn-outline-dark btn-sm mb-2">Perfumes</a>
+                            <a href="shoes.html" class="btn btn-outline-dark btn-sm mb-2">Shoes</a>
                         </div>
 
                     </div>
@@ -469,289 +442,461 @@
                         <div class="row g-3">
 
                             <!-- PRODUCT CARD -->
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
-                                    <p class="product-price">₹1200</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="product-name">Blend Shirt</p>
-                                    <p class="product-price">₹500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="product-name">Check Shirt</p>
-                                    <p class="product-price">₹400</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/fit-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/fit-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Fit Shirt</p>
                                     <p class="product-price">₹4500</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/fit-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                                    <p class="product-name">Coat Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                                    <p class="product-name">Cotton Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
-                                    <p class="product-price">₹1200</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="product-name">Blend Shirt</p>
-                                    <p class="product-price">₹500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="product-name">Check Shirt</p>
-                                    <p class="product-price">₹400</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                                    <p class="product-name">Fit Shirt</p>
-                                    <p class="product-price">₹4500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                                    <p class="product-name">Coat Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                                    <p class="product-name">Cotton Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
-                                    <p class="product-price">₹1200</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="product-name">Blend Shirt</p>
-                                    <p class="product-price">₹500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="product-name">Check Shirt</p>
-                                    <p class="product-price">₹400</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                                    <p class="product-name">Fit Shirt</p>
-                                    <p class="product-price">₹4500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                                    <p class="product-name">Coat Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                                    <p class="product-name">Cotton Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
-                                    <p class="product-price">₹1200</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="product-name">Blend Shirt</p>
-                                    <p class="product-price">₹500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="product-name">Check Shirt</p>
-                                    <p class="product-price">₹400</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                                    <p class="product-name">Fit Shirt</p>
-                                    <p class="product-price">₹4500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                                    <p class="product-name">Coat Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                                    <p class="product-name">Cotton Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
-                                    <p class="product-price">₹1200</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="product-name">Blend Shirt</p>
-                                    <p class="product-price">₹500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="product-name">Check Shirt</p>
-                                    <p class="product-price">₹400</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                                    <p class="product-name">Fit Shirt</p>
-                                    <p class="product-price">₹4500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                                    <p class="product-name">Coat Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                                    <p class="product-name">Cotton Shirt</p>
-                                    <p class="product-price">₹1500</p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
-                                    <p class="product-price">₹1200</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="product-name">Blend Shirt</p>
-                                    <p class="product-price">₹500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="product-name">Check Shirt</p>
-                                    <p class="product-price">₹400</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/fit-shirt.webp" alt="">
-                                    <p class="product-name">Fit Shirt</p>
-                                    <p class="product-price">₹4500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/coat-shirt.webp" alt="">
-                                    <p class="product-name">Coat Shirt</p>
-                                    <p class="product-price">₹1500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/cotton-shirt.webp" alt="">
-                                    <p class="product-name">Cotton Shirt</p>
-                                    <p class="product-price">₹1500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -777,51 +922,105 @@
                         <div class="row g-3">
 
                             <!-- PRODUCT -->
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/abstract-shirt.webp" alt="">
-                                    <p class="m-0">Abstract Shirt</p>
-                                    <p>₹1200</p>
+                          <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt.webp" alt="">
-                                    <p class="m-0">Blend Shirt</p>
-                                    <p>₹500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt3.webp" alt="">
-                                    <p class="m-0">Check Shirt</p>
-                                    <p>₹400</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/blend-shirt1.webp" alt="">
-                                    <p class="m-0">Blend Shirt</p>
-                                    <p>₹4500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt.webp" alt="">
-                                    <p class="m-0">Check Shirt</p>
-                                    <p>₹1500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-4 col-lg-2">
-                                <div class="product-card">
-                                    <img src="assets/Popular-image/check-shirt2.webp" alt="">
-                                    <p class="m-0">Check Shirt</p>
-                                    <p>₹1500</p>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="product-card product-container">
+                                    <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
+                                    <p class="product-name">Abstract Shirt</p>
+                                    <p class="product-price">₹999</p>
+                                    <!-- Hover Image -->
+                                    <div class="hover-img">
+                                        <a href="../cargo-paints/abstract-shirt.html"><i class="bi bi-eye"></i></a>
+                                        <a href="#"><i class="bi bi-cart"></i></a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -838,7 +1037,7 @@
                 </section>
 
                 <!-- footer -->
-                <footer>
+                <footer style="font-size: 14px;">
                     <section id="about" class="mt-5">
                         <div class="container-fluid p-5">
                             <h5>More about shopping At Snitch for men</h3>
@@ -847,40 +1046,40 @@
                                 <div class="row gy-4">
 
                                     <div class="col-6 col-md-4 col-lg-2">
-                                        <a href="#" class="nav-link">T-shirt</a><br>
-                                        <a href="#" class="nav-link">Blogs</a><br>
-                                        <a href="#" class="nav-link">Co-Ords</a><br>
+                                        <a href="#" class="nav-link">T-shirt</a>
+                                        <a href="#" class="nav-link">Blogs</a>
+                                        <a href="#" class="nav-link">Co-Ords</a>
                                         <a href="#" class="nav-link">Shoes</a>
                                     </div>
 
                                     <div class="col-6 col-md-4 col-lg-2">
-                                        <a href="#" class="nav-link">Shirt</a><br>
-                                        <a href="#" class="nav-link">Accessories</a><br>
-                                        <a href="#" class="nav-link">Hoodies</a><br>
+                                        <a href="#" class="nav-link">Shirt</a>
+                                        <a href="#" class="nav-link">Accessories</a>
+                                        <a href="#" class="nav-link">Hoodies</a>
                                         <a href="#" class="nav-link">Sunglasses</a>
                                     </div>
 
                                     <div class="col-6 col-md-4 col-lg-2">
-                                        <a href="#" class="nav-link">Joggers</a><br>
-                                        <a href="#" class="nav-link">Belts</a><br>
+                                        <a href="#" class="nav-link">Joggers</a>
+                                        <a href="#" class="nav-link">Belts</a>
                                         <a href="#" class="nav-link">Jackets</a>
                                     </div>
 
                                     <div class="col-6 col-md-4 col-lg-2">
-                                        <a href="#" class="nav-link">Shoes</a><br>
-                                        <a href="#" class="nav-link">Blazer</a><br>
+                                        <a href="#" class="nav-link">Shoes</a>
+                                        <a href="#" class="nav-link">Blazer</a>
                                         <a href="#" class="nav-link">Jeans</a>
                                     </div>
 
                                     <div class="col-6 col-md-4 col-lg-2">
-                                        <a href="#" class="nav-link">Trousers</a><br>
-                                        <a href="#" class="nav-link">Boxers</a><br>
+                                        <a href="#" class="nav-link">Trousers</a>
+                                        <a href="#" class="nav-link">Boxers</a>
                                         <a href="#" class="nav-link">Night Suit</a>
                                     </div>
 
                                     <div class="col-6 col-md-4 col-lg-2">
-                                        <a href="#" class="nav-link">Sweatshirt</a><br>
-                                        <a href="#" class="nav-link">Cargo Pants</a><br>
+                                        <a href="#" class="nav-link">Sweatshirt</a>
+                                        <a href="#" class="nav-link">Cargo Pants</a>
                                         <a href="#" class="nav-link">Overshirts</a>
                                     </div>
                                 </div>
@@ -1098,8 +1297,8 @@
                                 </ul>
 
                                 <div style="background-color: white; padding: 20px;">
-                                    <p class="fs-4">Why Shop at SNITCH?</p>
-                                    <ul>
+                                    <p class="fs-4 text-dark">Why Shop at SNITCH?</p>
+                                    <ul class="text-dark">
                                         <li><a href="#" class="nav-link">✔ Contemporary Menswear That Keeps Up with
                                                 You</a></li>
                                         <li><a href="#" class="nav-link">✔ Effortless Online & In-Store Shopping
@@ -1111,21 +1310,21 @@
                                         <li><a href="#" class="nav-link">✔ Style That Speaks Volumes</a></li>
                                         <li><a href="#" class="nav-link">✔ Sizes That Fit Every Man</a></li>
                                     </ul>
-                                    <p>Your wardrobe should work as hard as you do. SNITCH makes fashion easy, exciting,
+                                    <p class="text-dark">Your wardrobe should work as hard as you do. SNITCH makes fashion easy, exciting,
                                         and
                                         accessible—whether you're scrolling from your couch or styling in-store.</p>
                                 </div>
 
                                 <div style="background-color: white; padding: 20px; margin-top: 30px;">
-                                    <p class="fs-4">Upgrade Your Shopping Experience – Explore SNITCH Today!</p>
-                                    <p>Ready to redefine your wardrobe? Shop the latest men's fashion online or visit
+                                    <p class="fs-4 text-dark">Upgrade Your Shopping Experience – Explore SNITCH Today!</p>
+                                    <p class="text-dark">Ready to redefine your wardrobe? Shop the latest men's fashion online or visit
                                         your
                                         nearest
                                         store for a hands-on experience. From effortless joggers and co-ords to bold
                                         sunglasses
                                         and
                                         statement accessories, SNITCH has it all.</p>
-                                    <p>🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now! 🔥</p>
+                                    <p class="text-dark">🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now! 🔥</p>
                                 </div>
                                 <hr class="my-4">
                                 <footer>
@@ -1160,7 +1359,8 @@
                                                     class="nav-link fw-bold menu-f d-block">Privacy
                                                     Policy</a>
                                                 <a href="Term&Condition.html"
-                                                    class="nav-link fw-bold menu-f d-block">Terms &
+                                                    class="nav-link fw-bold menu-f d-block">Terms
+                                                    &
                                                     Condition</a>
                                                 <a href="Return.html" class="nav-link fw-bold menu-f d-block">Return</a>
                                                 <a href="contactUs.html"
@@ -1185,7 +1385,8 @@
                                                 </div>
                                                 <div><a href="https://techsaleem.netlify.app/"
                                                         class="nav-link fw-bold"><i class="bi bi-globe"
-                                                            style="color: #c45e3d;"></i> www.xyz.com </a></div>
+                                                            style="color: #c45e3d;"></i> www.xyz.com
+                                                    </a></div>
                                                 <div><a href="#" class="nav-link fw-bold"><i class="bi bi-geo-alt"
                                                             style="color: #c45e3d;"></i> INDIA</a></div>
 
@@ -1228,6 +1429,7 @@
                                         © 2026 D-TREYA. All rights reserved.
                                     </p>
                                 </footer>
+
                         </div>
                     </section>
 
@@ -1235,6 +1437,7 @@
 
             </div>
         </div>
+
         <!-- Modal -->
         <div class="modal fade modal-tablet-res" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
