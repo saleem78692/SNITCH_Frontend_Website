@@ -1353,7 +1353,12 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <!-- Init AOS -->
         <script>
-            AOS.init();
+            AOS.init({
+                duration: 1000,        // 2000ms = slow animation
+                easing: 'ease-in-out',
+                // once: true,
+                offset: 120
+            });
         </script>
 
 
