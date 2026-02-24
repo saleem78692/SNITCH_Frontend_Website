@@ -1,0 +1,36 @@
+/* Featured Section */
+#feature {
+    padding: 10px 0 40px;
+}
+
+/* Card */
+.feature-card {
+    text-align: center;
+    position: relative;
+}
+
+/* Image */
+.feature-img {
+    border-radius: 14px;
+    transition: all 0.4s ease;
+}
+
+/* Hover Effect */
+.feature-card:hover .feature-img {
+    transform: scale(1.06);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Text */
+.feature-text {
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Remove underline */
+.feature-card a {
+    text-decoration: none;
+}
+
+
