@@ -15,13 +15,13 @@
 <body>
     <div class="container-fluid p-0 m-0">
         <!-- header -->
-        <header class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
-                <div class="container-fluid px-3 px-lg-4 position-relative">
+        <header class="header custom-header">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm" style="height: 55px;">
+                <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center">
 
-                    <!-- MENU BUTTON (LEFT) -->
-                    <button class="btn btn-link link-dark p-0 border-0 me-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar">
+                    <!-- MENU BUTTON - Visible on mobile/tablet (below 992px) -->
+                    <button class="btn btn-link link-dark p-0 border-0 me-2 menu-toggle-btn d-lg-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -29,40 +29,36 @@
                         </svg>
                     </button>
 
-                    <!-- LOGO (CENTER) -->
-                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="Index.html">
-                        <img src="assets/side-menu-img/logo-2-removebg-preview.png" class="logo-custom" alt="Logo">
-                    </a>
 
 
-                    <!-- RIGHT ICONS -->
-                    <div class="d-flex align-items-center ms-auto">
-
-                        <!-- DESKTOP SEARCH -->
-                        <form class="d-none d-lg-flex me-3 position-relative">
+                    <!--CENTER -->
+                    <div class="navbar-brand d-flex align-items-center gap-3">
+                        <!-- Search - Visible on desktop (992px and above) -->
+                        <form class="d-none d-lg-flex position-relative search-container SearchForm">
                             <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 rounded-0">
-                                    <img src="assets/slider-images/search-icon.svg" height="18" alt="">
+                                <span class="input-group-text bg-transparent border-0 ps-3">
+                                    <img src="assets/slider-images/search-icon.svg" height="20" alt="">
                                 </span>
-                                <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
-                                    placeholder='Search "Overshirts"' style="width:200px;">
+                                <input class="form-control border-0 shadow-none ps-2 search-input" type="search"
+                                    placeholder='Search "Overshirts"' />
+
                             </div>
                         </form>
 
-                        <!-- MOBILE SEARCH ICON -->
-                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
-                            <i class="bi bi-search"></i>
-                        </a>
-
+                        <!-- Icons - Always visible -->
                         <!-- USER -->
-                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             <i class="bi bi-person"></i>
                         </a>
-
+                        <a href="#" class="text-dark fs-3 nav-icon">
+                            <i class="bi bi-bag-heart"></i>
+                        </a>
                         <!-- CART -->
-                        <a href="cart.html" class="text-dark fs-4">
+                        <a href="cart.html" class="text-dark fs-3 nav-icon">
                             <i class="bi bi-cart"></i>
                         </a>
+
                     </div>
                 </div>
             </nav>

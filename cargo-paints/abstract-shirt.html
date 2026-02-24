@@ -15,13 +15,13 @@
 <body>
     <div class="container-fluid p-0 m-0">
         <!-- header -->
-        <header class="header">
-            <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 fixed-top">
-                <div class="container-fluid px-3 px-lg-4 position-relative">
+        <header class="header custom-header">
+            <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm" style="height: 55px;">
+                <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center">
 
-                    <!-- MENU BUTTON (LEFT) -->
-                    <button class="btn btn-link link-dark p-0 border-0 me-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar">
+                    <!-- MENU BUTTON - Visible on mobile/tablet (below 992px) -->
+                    <button class="btn btn-link link-dark p-0 border-0 me-2 menu-toggle-btn d-lg-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -29,40 +29,36 @@
                         </svg>
                     </button>
 
-                    <!-- LOGO (CENTER) -->
-                    <a class="navbar-brand position-absolute top-50 start-50 translate-middle" href="Index.html">
-                        <img src="../assets/side-menu-img/logo-2-removebg-preview.png" class="logo-custom" alt="Logo">
-                    </a>
 
 
-                    <!-- RIGHT ICONS -->
-                    <div class="d-flex align-items-center ms-auto">
-
-                        <!-- DESKTOP SEARCH -->
-                        <form class="d-none d-lg-flex me-3 position-relative">
+                    <!--CENTER -->
+                    <div class="navbar-brand d-flex align-items-center gap-3">
+                        <!-- Search - Visible on desktop (992px and above) -->
+                        <form class="d-none d-lg-flex position-relative search-container SearchForm">
                             <div class="input-group">
-                                <span class="input-group-text bg-white border-end-0 rounded-0">
-                                    <img src="../assets/slider-images/search-icon.svg" height="18" alt="">
+                                <span class="input-group-text bg-transparent border-0 ps-3">
+                                    <img src="assets/slider-images/search-icon.svg" height="20" alt="">
                                 </span>
-                                <input class="form-control border-start-0 rounded-0 shadow-none ps-0" type="search"
-                                    placeholder='Search "Overshirts"' style="width:200px;">
+                                <input class="form-control border-0 shadow-none ps-2 search-input" type="search"
+                                    placeholder='Search "Overshirts"' />
+
                             </div>
                         </form>
 
-                        <!-- MOBILE SEARCH ICON -->
-                        <a href="#" class="d-lg-none me-3 text-dark fs-4">
-                            <i class="bi bi-search"></i>
-                        </a>
-
+                        <!-- Icons - Always visible -->
                         <!-- USER -->
-                        <a href="#" class="text-dark fs-4 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             <i class="bi bi-person"></i>
                         </a>
-
+                        <a href="#" class="text-dark fs-3 nav-icon">
+                            <i class="bi bi-bag-heart"></i>
+                        </a>
                         <!-- CART -->
-                        <a href="../cart.html" class="text-dark fs-4">
+                        <a href="cart.html" class="text-dark fs-3 nav-icon">
                             <i class="bi bi-cart"></i>
                         </a>
+
                     </div>
                 </div>
             </nav>
@@ -183,7 +179,7 @@
 
 
 
-        <div class="row m-0 pt-5" style="background-color: #f7eee8; min-height: 100vh;">
+        <div class="row m-0 mt-5 pt-4">
             <!-- Left -->
             <div class="col-2 col-md-1 d-none d-md-block">
                 <div class="d-flex flex-column gap-2">
@@ -201,8 +197,8 @@
             <!-- Center -->
             <div class="col-12 col-md-5">
                 <div class="position-relative">
-                    <img src="../assets/Popular-image/abstract-shirt.webp" style="width: 100%; height: 650px; object-fit: cover;"
-                        alt="Main Product Image">
+                    <img src="../assets/Popular-image/abstract-shirt.webp"
+                        style="width: 100%; height: 650px; object-fit: cover;" alt="Main Product Image">
                     <button
                         class="btn btn-light position-absolute top-50 start-0 translate-middle-y rounded-circle ms-2 shadow-sm d-md-none">
                         <i class="bi bi-chevron-left"></i>
@@ -258,68 +254,34 @@
                 <button class="btn btn-dark w-100 py-3 fw-bold rounded-0 mb-4">ADD TO BAG</button>
 
                 <!-- Accordions -->
-                <div class="accordion accordion-flush" id="productAccordion">
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow-none bg-transparent ps-0 fw-bold small"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
-                                DETAILS
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            data-bs-parent="#productAccordion">
-                            <div class="accordion-body ps-0 text-muted small">
-                                Product details go here. Material, care instructions, etc.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow-none bg-transparent ps-0 fw-bold small"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
-                                DELIVERY
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            data-bs-parent="#productAccordion">
-                            <div class="accordion-body ps-0 text-muted small">
-                                Delivery information goes here. Timelines and shipping partners.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item border-bottom">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed shadow-none bg-transparent ps-0 fw-bold small"
-                                type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
-                                RETURNS
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            data-bs-parent="#productAccordion">
-                            <div class="accordion-body ps-0 text-muted small">
-                                Return policy details go here. 7-day return policy etc.
-                            </div>
-                        </div>
-                    </div>
+
+
+                <div>
+                    <h5>Details:</h5>
+                </div>
+                <div>
+                    <p>Product details go here. Fabric, fit, care instructions etc.</p>
                 </div>
 
-                <!-- Ask Sid -->
-                <div class="mt-4 p-3 bg-light rounded d-flex align-items-center gap-3">
-                    <div class="bg-black text-white rounded-circle p-2 d-flex align-items-center justify-content-center"
-                        style="width: 40px; height: 40px;">
-                        <i class="bi bi-robot"></i>
-                    </div>
-                    <div>
-                        <p class="fw-bold mb-0 small">Ask Sid</p>
-                        <p class="text-muted mb-0 small" style="font-size: 11px;">Your style assistant</p>
-                    </div>
+
+                <div>
+                    <h5>Returns Policy</h5>
                 </div>
-                <div class="d-flex gap-2 mt-2 flex-wrap">
-                    <button class="btn btn-light border btn-sm small" style="font-size: 11px;">Ask something
-                        else...</button>
-                    <button class="btn btn-light border btn-sm small" style="font-size: 11px;">Show me accessories that
-                        can go well with this</button>
+                <div>
+                    <p>Our returns policy allows returns within 7 days of purchase. Items must be in original condition
+                        with tags attached.</p>
                 </div>
+
+
+                <div>
+                    <h5>Shipping Information</h5>
+                </div>
+                <div>
+                    <p>We offer free shipping on orders over ₹500. Standard delivery takes 3-5 business days.</p>
+                </div>
+
+
+
 
             </div>
 

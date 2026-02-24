@@ -17,11 +17,11 @@
         <!-- header -->
         <header class="header custom-header">
             <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 fixed-top shadow-sm" style="height: 55px;">
-                <div class="container-fluid px-3 px-lg-4 position-relative">
+                <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center">
 
-                    <!-- MENU BUTTON (LEFT) -->
-                    <button class="btn btn-link link-dark p-0 border-0 me-2" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar">
+                    <!-- MENU BUTTON - Visible on mobile/tablet (below 992px) -->
+                    <button class="btn btn-link link-dark p-0 border-0 me-2 menu-toggle-btn d-lg-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -29,12 +29,13 @@
                         </svg>
                     </button>
 
+                    
+
                     <!--CENTER -->
-                    <div
-                        class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center gap-3 p-5">
-                        <!-- DESKTOP SEARCH -->
-                        <form class="d-flex position-relative search-container SearchForm">
-                            <div class="input-group ">
+                    <div class="navbar-brand d-flex align-items-center gap-3">
+                        <!-- Search - Visible on desktop (992px and above) -->
+                        <form class="d-none d-lg-flex position-relative search-container SearchForm">
+                            <div class="input-group">
                                 <span class="input-group-text bg-transparent border-0 ps-3">
                                     <img src="assets/slider-images/search-icon.svg" height="20" alt="">
                                 </span>
@@ -43,6 +44,8 @@
 
                             </div>
                         </form>
+
+                        <!-- Icons - Always visible -->
                         <!-- USER -->
                         <a href="#" class="text-dark fs-3 nav-icon" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
@@ -61,13 +64,11 @@
             </nav>
         </header>
 
-        <header class="offer">
-            <div class="row m-0 mt-2">
-                <div class="col-sm-12 col-md-12 col-lg-12 bg-dark">
-                    <div class="text-white text-center mt-5">
-                        <p>Up to 50% off on selected items</p>
-                    </div>
-                </div>
+        <header class="offer-header">
+            <div class="offer-container">
+                <span class="offer-badge">HOT DEAL</span>
+                <p class="offer-text">Up to <strong>50% OFF</strong> on selected items</p>
+                <span class="offer-close">&times;</span>
             </div>
         </header>
 
@@ -419,22 +420,43 @@
                         </div>
                     </div>
                     <br>
+
                     <!-- FILTER BUTTONS -->
-                    <div class="row m-0">
-
-                        <div class="col-12 col-md-12 col-lg-12">
-                            <a href="Cargo-Paints.html" class="btn btn-outline-dark btn-sm active mb-2">All</a>
-                            <a href="shirts.html" class="btn btn-outline-dark btn-sm mb-2">Shirts</a>
-                            <a href="Jeans.html" class="btn btn-outline-dark btn-sm mb-2">Jeans</a>
-                            <a href="T-Shirt.html" class="btn btn-outline-dark btn-sm mb-2">T-Shirts</a>
-                            <a href="Tousers.html" class="btn btn-outline-dark btn-sm mb-2">Trousers</a>
-                            <a href="Outwear-Jackect.html" class="btn btn-outline-dark btn-sm mb-2">Jackets</a>
-                            <a href="Outwear-Sweater.html" class="btn btn-outline-dark btn-sm mb-2">Sweater</a>
-                            <a href="Cargo-Paints.html" class="btn btn-outline-dark btn-sm mb-2">Hoodies</a>
-                            <a href="Perfumes.html" class="btn btn-outline-dark btn-sm mb-2">Perfumes</a>
-                            <a href="shoes.html" class="btn btn-outline-dark btn-sm mb-2">Shoes</a>
+                    <div class="filter-slider-wrapper" id="filterWrapper">
+                        <div class="filter-slider" id="filterSlider">
+                            <button class="btn btn-outline-dark active">All</button>
+                            <button class="btn btn-outline-dark">Shirts</button>
+                            <button class="btn btn-outline-dark">Jeans</button>
+                            <button class="btn btn-outline-dark">T-Shirts</button>
+                            <button class="btn btn-outline-dark">Trousers</button>
+                            <button class="btn btn-outline-dark">Jackets</button>
+                            <button class="btn btn-outline-dark">Sweater</button>
+                            <button class="btn btn-outline-dark">Hoodies</button>
+                            <button class="btn btn-outline-dark">Perfumes</button>
+                            <button class="btn btn-outline-dark">Shoes</button>
+                            <button class="btn btn-outline-dark">T-Shirts</button>
+                            <button class="btn btn-outline-dark">Trousers</button>
+                            <button class="btn btn-outline-dark">Jackets</button>
+                            <button class="btn btn-outline-dark">Sweater</button>
+                            <button class="btn btn-outline-dark">Hoodies</button>
+                            <button class="btn btn-outline-dark">Perfumes</button>
+                            <button class="btn btn-outline-dark">Shoes</button>
+                            <button class="btn btn-outline-dark">T-Shirts</button>
+                            <button class="btn btn-outline-dark">Trousers</button>
+                            <button class="btn btn-outline-dark">Jackets</button>
+                            <button class="btn btn-outline-dark">Sweater</button>
+                            <button class="btn btn-outline-dark active">All</button>
+                            <button class="btn btn-outline-dark">Hoodies</button>
+                            <button class="btn btn-outline-dark">Perfumes</button>
+                            <button class="btn btn-outline-dark">Shoes</button>
+                            <button class="btn btn-outline-dark">T-Shirts</button>
+                            <button class="btn btn-outline-dark">Trousers</button>
+                            <button class="btn btn-outline-dark">Jackets</button>
+                            <button class="btn btn-outline-dark">Sweater</button>
+                            <button class="btn btn-outline-dark">Hoodies</button>
+                            <button class="btn btn-outline-dark">Perfumes</button>
+                            <button class="btn btn-outline-dark">Shoes</button>
                         </div>
-
                     </div>
 
                     <!-- PRODUCTS GRID -->
@@ -922,7 +944,7 @@
                         <div class="row g-3">
 
                             <!-- PRODUCT -->
-                          <div class="col-6 col-md-4 col-lg-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="product-card product-container">
                                     <img src="assets/Popular-image/abstract-shirt.webp" class="product-img" alt="">
                                     <p class="product-name">Abstract Shirt</p>
@@ -1310,26 +1332,30 @@
                                         <li><a href="#" class="nav-link">✔ Style That Speaks Volumes</a></li>
                                         <li><a href="#" class="nav-link">✔ Sizes That Fit Every Man</a></li>
                                     </ul>
-                                    <p class="text-dark">Your wardrobe should work as hard as you do. SNITCH makes fashion easy, exciting,
+                                    <p class="text-dark">Your wardrobe should work as hard as you do. SNITCH makes
+                                        fashion easy, exciting,
                                         and
                                         accessible—whether you're scrolling from your couch or styling in-store.</p>
                                 </div>
 
                                 <div style="background-color: white; padding: 20px; margin-top: 30px;">
-                                    <p class="fs-4 text-dark">Upgrade Your Shopping Experience – Explore SNITCH Today!</p>
-                                    <p class="text-dark">Ready to redefine your wardrobe? Shop the latest men's fashion online or visit
+                                    <p class="fs-4 text-dark">Upgrade Your Shopping Experience – Explore SNITCH Today!
+                                    </p>
+                                    <p class="text-dark">Ready to redefine your wardrobe? Shop the latest men's fashion
+                                        online or visit
                                         your
                                         nearest
                                         store for a hands-on experience. From effortless joggers and co-ords to bold
                                         sunglasses
                                         and
                                         statement accessories, SNITCH has it all.</p>
-                                    <p class="text-dark">🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now! 🔥</p>
+                                    <p class="text-dark">🔥 Stay ahead of trends. Elevate your style. Shop SNITCH now!
+                                        🔥</p>
                                 </div>
                                 <hr class="my-4">
                                 <footer>
                                     <!-- COMPANY -->
-                                    <h2 class="fw-bold text-center">Company</h2>
+                                    <h2 class="fw-bold text-center pt-4">Company</h2>
 
                                     <div class="row m-0 mt-3">
                                         <div class="col-sm-12 footer-2 col-md-6 col-lg-3" style="line-height: 25px;">
